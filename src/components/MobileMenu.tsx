@@ -39,28 +39,21 @@ const MobileMenu = ({ isOpen = false, onCloseClick, menuRef }: IProps) => (
 					href="#services"
 					onClick={onCloseClick}
 				>
-					Послуги
+					Layanan
 				</a>
 				<a
 					className="transition hover:text-accent"
 					href="#benefits"
 					onClick={onCloseClick}
 				>
-					Переваги
-				</a>
-				<a
-					className="transition hover:text-accent"
-					href="#team"
-					onClick={onCloseClick}
-				>
-					Спеціалісти
+					Keuntungan
 				</a>
 				<a
 					className="transition hover:text-accent"
 					href="#booking"
 					onClick={onCloseClick}
 				>
-					Консультація
+					Konsultasi
 				</a>
 			</nav>
 		</FocusLock>
