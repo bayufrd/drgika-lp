@@ -95,16 +95,18 @@ const Services = () => (
         <h3 className="text-2xl font-bold mb-6 text-gray-800 text-center">
           Layanan Lengkap <span className="text-pink-500">Kami</span>
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-700">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-gray-700">
           {[
-            "Ortodonti",
-            "Implan Gigi",
-            "Kedokteran Anak",
-            "Pertolongan Darurat",
-            "Konsultasi Online",
-            "Perawatan Laser",
-            "Scaling",
-            "Bedah Mulut"
+            "Pencabutan Gigi Anak & Dewasa",
+            "Pembersihan Karang Gigi / Scalling",
+            "Pembuatan Gigi Palsu / Protesa",
+            "Veneer, Crown, Bridge",
+            "Perawatan Saluran Akar / Endodonti",
+            "Pemasangan Behel",
+            "Pemutihan Gigi / Bleaching",
+            "Penambalan Gigi Dewasa & Anak",
+            "Operasi Gigi Miring / Bungsu",
+            "Dan Yang Berhubungan Dengan Gigi"
           ].map((service, index) => (
             <div 
               key={index} 

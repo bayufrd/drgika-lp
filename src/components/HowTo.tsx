@@ -13,6 +13,7 @@ const HowTo = () => (
   <FlexSection
     sectionClassName="py-16 bg-gradient-to-br from-accent to-blue-600"
     wrapperClassName="lg:flex-col lg:items-start xl:flex-row xl:items-center"
+    id="prosedur"
   >
     <div className="flex-1 space-y-4">
       <h2 className="text-4xl font-bold text-white drop-shadow-md">

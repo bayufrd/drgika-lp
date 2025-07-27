@@ -84,13 +84,19 @@ const Header = () => {
 					}}
 				>
 					<Wrapper className="flex items-center justify-between">
-						<Link
+						<a
 							className="text-xl font-bold transition hover:opacity-80"
-							href="#page-top"
+							href="#pagetop"
 						>
 							<span className="text-accent text-pink-500">Drg.</span> Ika Kiromin Baroroh
-						</Link>
+						</a>
 						<div className="hidden md:flex items-center gap-6 text-sm font-medium">
+						<a 
+								className="transition hover:text-accent flex items-center gap-1" 
+								href="#prosedur"
+							>
+								Prosedur
+							</a>
 							<a 
 								className="transition hover:text-accent flex items-center gap-1" 
 								href="#services"

@@ -9,7 +9,7 @@ const Hero = () => (
 	<FlexSection
 		sectionClassName="py-16 bg-gradient-to-br from-pink-100 to-white"
 		className="min-h-screen flex items-center justify-center"
-		id="page-top"
+		id="pagetop"
 	>
 		<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="page-top">
 			<div className="space-y-6 text-center lg:text-left">

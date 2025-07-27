@@ -34,6 +34,13 @@ const MobileMenu = ({ isOpen = false, onCloseClick, menuRef }: IProps) => (
 				<AiOutlineCloseCircle className="w-8 h-8" />
 			</button>
 			<nav className="m-auto flex flex-col items-start text-lg font-medium gap-5">
+			<a
+					className="transition hover:text-accent"
+					href="#prosedur"
+					onClick={onCloseClick}
+				>
+					Prosedur
+				</a>
 				<a
 					className="transition hover:text-accent"
 					href="#services"
@@ -47,6 +54,13 @@ const MobileMenu = ({ isOpen = false, onCloseClick, menuRef }: IProps) => (
 					onClick={onCloseClick}
 				>
 					Keuntungan
+				</a>
+				<a
+					className="transition hover:text-accent"
+					href="#galeri"
+					onClick={onCloseClick}
+				>
+					Galleri
 				</a>
 				<a
 					className="transition hover:text-accent"
