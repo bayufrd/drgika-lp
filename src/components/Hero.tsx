@@ -2,7 +2,6 @@
 import { useCallback } from 'react';
 import FlexSection from "./FlexSection";
 import Image from "next/image";
-import heroImage from "../assets/hero.svg";
 import Link from 'next/link';
 import { LuClock, LuPlus } from "react-icons/lu";
 import { FaHeartPulse } from "react-icons/fa6";
@@ -102,7 +101,7 @@ const Hero = () => {
 				</div>
 				<div className="hidden lg:flex justify-center items-center">
 					<Image
-						src={heroImage}
+						src="/images/hero.svg"
 						alt="Ilustrasi Perawatan Gigi Modern"
 						className="w-full max-w-md animate-float"
 					/>

@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowTo from "@/components/HowTo";
 import Services from "@/components/Services";
-import Gallery from "@/components/Gallery";
+import Gallery from "src/components/Gallery";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   // Optional: Add alternate language versions if applicable
   alternates: {
-    canonical: 'https://www.drg.ikakiromin.com',
+    canonical: 'https://.drg.ikakiromin.com',
   },
 };
 

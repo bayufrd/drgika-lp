@@ -1,7 +1,4 @@
 import FlexSection from "./FlexSection";
-import laserImage from "../assets/laser.svg";
-import scannerImage from "../assets/scanner.svg";
-import implantImage from "../assets/implant.svg";
 import Image from "next/image";
 import { FaCheckCircle, FaLightbulb, FaTools } from "react-icons/fa";
 import SectionHeading from "./SectionHeading";
@@ -62,7 +59,7 @@ const Benefits = () => (
                     icon={
                         <Image 
                             className="w-20 h-20 group-hover:scale-110 transition-transform" 
-                            src={laserImage} 
+                            src="/images/laser.svg" 
                             alt="Laser Modern" 
                         />
                     }
@@ -75,7 +72,7 @@ const Benefits = () => (
                     icon={
                         <Image 
                             className="w-20 h-20 group-hover:scale-110 transition-transform" 
-                            src={scannerImage} 
+                            src="/images/scanner.svg"
                             alt="Pemindai 3D" 
                         />
                     }
@@ -88,7 +85,7 @@ const Benefits = () => (
                     icon={
                         <Image 
                             className="w-20 h-20 group-hover:scale-110 transition-transform" 
-                            src={implantImage} 
+                            src="/images/implant.svg" 
                             alt="Implan Profesional" 
                         />
                     }

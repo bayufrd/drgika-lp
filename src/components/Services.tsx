@@ -1,6 +1,5 @@
 import FlexSection from "./FlexSection";
 import Image from "next/image";
-import servicesImage from "../assets/services.svg";
 import {
   LuShieldCheck,
   LuSmile,
