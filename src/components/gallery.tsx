@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import FlexSection from "./FlexSection";
 import Image from "next/image";
+import React, { MouseEvent } from 'react';
 import { LuImagePlus, LuSearch, LuX } from "react-icons/lu";
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -54,7 +55,7 @@ const Gallery: React.FC = () => {
     >
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
@@ -75,8 +76,8 @@ const Gallery: React.FC = () => {
               onClick={() => setSelectedCategory(category.value)}
               className={`
                 px-4 py-2 rounded-full transition-all duration-300
-                ${selectedCategory === category.value 
-                  ? 'bg-pink-500 text-white' 
+                ${selectedCategory === category.value
+                  ? 'bg-pink-500 text-white'
                   : 'bg-pink-100 text-pink-600 hover:bg-pink-200'}
               `}
             >
@@ -86,7 +87,7 @@ const Gallery: React.FC = () => {
         </div>
 
         {/* Grid Galeri */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         >
@@ -121,7 +122,7 @@ const Gallery: React.FC = () => {
 
         {/* Modal Gambar */}
         {selectedImage && (
-          <div 
+          <div
             className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
@@ -129,7 +130,7 @@ const Gallery: React.FC = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               className="max-w-4xl w-full bg-white rounded-xl overflow-hidden shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e: MouseEvent) => e.stopPropagation()}
             >
               <div className="relative">
                 <Image
@@ -139,7 +140,7 @@ const Gallery: React.FC = () => {
                   height={800}
                   className="w-full max-h-[70vh] object-cover"
                 />
-                <button 
+                <button
                   className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-pink-100 transition"
                   onClick={() => setSelectedImage(null)}
                 >
@@ -164,9 +165,9 @@ const Gallery: React.FC = () => {
             Cerita <span className="text-pink-500">Di Balik Senyum</span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Setiap foto adalah perjalanan transformasi. 
-            Dari senyum yang kurang percaya diri hingga 
-            senyum yang memukau - Drg. Ika ada di sini untuk 
+            Setiap foto adalah perjalanan transformasi.
+            Dari senyum yang kurang percaya diri hingga
+            senyum yang memukau - Drg. Ika ada di sini untuk
             membantu Anda menemukan kepercayaan diri Anda! 💫✨
           </p>
         </div>

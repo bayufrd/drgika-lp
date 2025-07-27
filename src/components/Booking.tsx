@@ -2,7 +2,6 @@
 
 import SectionHeading from "./SectionHeading";
 import FlexSection from "./FlexSection";
-import bookingImage from "../assets/booking.svg";
 import Image from "next/image";
 import { LuCalendar, LuPhone, LuMessageSquare } from "react-icons/lu";
 import twclsx from "@/utils/twclsx";
@@ -56,7 +55,31 @@ const Booking = () => {
       [name]: value
     }));
   };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
+    // Construct WhatsApp message
+    const message = `Halo Bu Dokter Gigi Ika Kiromin.
+Melalui Konsultasi via Website diarahkan kesini
+
+Nama : ${formData.nama}
+Umur : ${formData.usia}
+Gender : ${formData.jenisKelamin}
+Pada Tanggal : ${formData.tanggal} , jam ${formData.jam}
+Ingin Konsultasi mengenai permasalahan :
+${formData.tambahan}
+
+Terimakasih`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Replace with actual WhatsApp number (use international format without + or 0)
+    const phoneNumber = '+6281329970317'; // Example number, replace with actual clinic number
+
+    // Open WhatsApp in a new tab
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+  };
   return (
     <FlexSection
       sectionClassName="py-16 bg-white relative"
@@ -77,9 +100,10 @@ const Booking = () => {
           <div className="flex-1 hidden lg:block">
             <Image
               className="w-full animate-float"
-              src={bookingImage}
+              src="/images/booking.svg"  // From public folder
               alt="booking"
-              priority
+              width={500}  // specify width
+              height={500} // specify height
             />
           </div>
 
@@ -108,7 +132,7 @@ const Booking = () => {
               />
             </div>
 
-            <form className="w-full flex flex-col gap-6">
+            <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6">
               <div className="flex flex-col lg:flex-row gap-6">
                 <input
                   name="nama"
@@ -182,6 +206,7 @@ const Booking = () => {
                 title="Informasi tambahan harus diisi"
               />
               <button
+                type="submit"
                 className={twclsx(
                   "px-8 py-4 rounded-lg select-none text-white bg-pink-500 hover:bg-pink-600",
                   "transition duration-150 ease-in-out transform hover:scale-105"
