@@ -1,11 +1,21 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useState } from "react";
 
 const useLockBodyScroll = (locked: boolean) => {
-	useLayoutEffect(() => {
-		const overflowY = locked ? "hidden" : "scroll";
+    const [isClient, setIsClient] = useState(false);
 
-		document.body.style.overflowY = overflowY;
-	}, [locked]);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    useEffect(() => {
+        if (isClient && locked) {
+            document.body.style.overflowY = "hidden";
+            
+            return () => {
+                document.body.style.overflowY = "scroll";
+            };
+        }
+    }, [isClient, locked]);
 };
 
 export default useLockBodyScroll;

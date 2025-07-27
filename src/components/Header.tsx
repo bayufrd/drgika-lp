@@ -7,18 +7,24 @@ import { GoLocation } from "react-icons/go";
 import Link from "next/link";
 import ButtonLink from "./ButtonLink";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import MobileMenu from "./MobileMenu";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 
-
 const Header = () => {
 	const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
+	const [isClient, setIsClient] = useState(false);
 	const menuRef = useRef<HTMLElement>(null);
+
+	// Pastikan komponen hanya di-render di client
+	useEffect(() => {
+		setIsClient(true);
+	}, []);
 
 	const toggleMenu = () => setMenuIsOpen(!menuIsOpen);
 
-	useLockBodyScroll(menuIsOpen);
+	// Gunakan conditional hook
+	useLockBodyScroll(menuIsOpen && isClient);
 
 	// Inline styles untuk mengatur padding body saat header fixed
 	const headerStyles = `
@@ -32,6 +38,11 @@ const Header = () => {
 			}
 		}
 	`;
+
+	// Hindari render yang berbeda antara server dan client
+	if (!isClient) {
+		return null;
+	}
 
 	return (
 		<>
