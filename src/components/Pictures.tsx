@@ -8,7 +8,7 @@ import { LuImagePlus, LuSearch, LuX } from "react-icons/lu";
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Definisi tipe untuk item galeri
-interface GalleryItem {
+interface PicturesItem {
   id: string;
   title: string;
   description: string;
@@ -18,27 +18,27 @@ interface GalleryItem {
 }
 
 // Contoh data galeri (bisa diganti dengan data dari backend)
-const galleryData: GalleryItem[] = [
+const PicturesData: PicturesItem[] = [
 //   {
 //     id: '1',
 //     title: 'Senyum Transformasi',
 //     description: 'Dari malu-malu jadi PD abis!',
-//     largeImage: '/images/gallery-1-large.jpg',
-//     smallImage: '/images/gallery-1-small.jpg',
+//     largeImage: '/images/Pictures-1-large.jpg',
+//     smallImage: '/images/Pictures-1-small.jpg',
 //     category: 'sesudah'
 //   },
   // Tambahkan lebih banyak item...
 ];
 
-const Gallery: React.FC = () => {
+const Pictures: React.FC = () => {
   // State untuk manajemen galeri
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [selectedImage, setSelectedImage] = useState<PicturesItem | null>(null);
 
   // Filter gambar berdasarkan kategori
-  const filteredGallery = selectedCategory
-    ? galleryData.filter(item => item.category === selectedCategory)
-    : galleryData;
+  const filteredPictures = selectedCategory
+    ? PicturesData.filter(item => item.category === selectedCategory)
+    : PicturesData;
 
   // Kategori filter
   const categories = [
@@ -92,7 +92,7 @@ const Gallery: React.FC = () => {
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         >
           <AnimatePresence>
-            {filteredGallery.map((item) => (
+            {filteredPictures.map((item) => (
               <motion.div
                 key={item.id}
                 layout
@@ -176,4 +176,4 @@ const Gallery: React.FC = () => {
   );
 };
 
-export default Gallery;
+export default Pictures;

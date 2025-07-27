@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowTo from "@/components/HowTo";
 import Services from "@/components/Services";
-import Gallery from "src/components/Gallery";
+import Pictures from "@/components/Pictures";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -63,7 +63,7 @@ const Home = () => (
 		<HowTo />
 		<Services />
 		<Benefits />
-		<Gallery />
+		<Pictures />
 		<Booking />
 		<Footer />
 	</>
