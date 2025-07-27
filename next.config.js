@@ -17,6 +17,8 @@ const nextConfig = {
       },
     ],
   },
+  // Explicitly disable SWC platform-specific configuration
+  swcMinify: true,
   webpack: (config) => {
     config.resolve.fallback = { fs: false, net: false, tls: false };
     return config;
