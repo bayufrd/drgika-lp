@@ -39,20 +39,19 @@ const Benefits = () => (
     <FlexSection
         sectionClassName="py-16 bg-gradient-to-br from-accent to-blue-600"
         wrapperClassName="lg:flex-col lg:items-start xl:flex-row xl:items-center"
-		id="benefits"
+        id="benefits"
     >
         <div className="container mx-auto px-4">
             <SectionHeading
                 direction="right"
                 title={
                     <>
-                        <span className="text-white">Cara</span> <span className="text-yellow-400">Kami</span> <span className="text-white">Memberikan 
-                        Pelayanan Terbaik</span>
+                        <span className="text-white">Rahasia</span> <span className="text-yellow-400">Kece</span> <span className="text-white">Dibalik Senyummu</span>
                     </>
                 }
                 subtitle={
                     <>
-                        <span className="text-white">3 Langkah </span><span className="text-yellow-400">Menuju </span><span className="text-white">Kesehatan Gigi Optimal</span>
+                        <span className="text-white">3 Steps </span><span className="text-yellow-400">Level Up </span><span className="text-white">Gigi Gahar!</span>
                     </>
                 }
             />
@@ -67,8 +66,8 @@ const Benefits = () => (
                             alt="Laser Modern" 
                         />
                     }
-                    title="Teknologi Laser Canggih"
-                    description="Menggunakan laser dioda mutakhir untuk perawatan yang cepat, presisi, dan bebas rasa sakit."
+                    title="Laser Gokil Tanpa Rasa Sakit"
+                    description="Teknologi laser kece yang bikin proses perawatan secepat nge-scroll Instagram. Dijamin anti sakit, anti ribet!"
                 />
                 
                 <BenefitItem
@@ -80,8 +79,8 @@ const Benefits = () => (
                             alt="Pemindai 3D" 
                         />
                     }
-                    title="Pemindaian 3D Akurat"
-                    description="Teknologi pemindaian 3D tercanggih untuk diagnosa tepat dan perencanaan perawatan optimal."
+                    title="Scanning Super Akurat"
+                    description="Teknologi 3D yang lebih presisi dari filter Instagram. Deteksi masalah gigi secepat loading meme!"
                 />
                 
                 <BenefitItem
@@ -93,28 +92,28 @@ const Benefits = () => (
                             alt="Implan Profesional" 
                         />
                     }
-                    title="Ahli Implan Berpengalaman"
-                    description="Lebih dari 30 tahun pengalaman dalam pemasangan implan gigi dengan tingkat keberhasilan tinggi."
+                    title="Implan Pro Sejuta Umat"
+                    description="Ahli implan dengan pengalaman lebih bernostalgia dari TikTok. Tingkat keberhasilan? Auto bikin PD!"
                 />
             </div>
 
             {/* Tambahan informasi */}
             <div className="mt-16 text-center bg-white p-8 rounded-lg shadow-md">
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                    Mengapa Memilih Kami?
+                    Kenapa Harus Kita?
                 </h3>
                 <div className="flex justify-center space-x-8 text-gray-600">
                     <div className="flex items-center space-x-2 text-gray-700">
                         <FaCheckCircle className="text-green-500" />
-                        <span>Terjamin Aman</span>
+                        <span>Super Aman</span>
                     </div>
                     <div className="flex items-center space-x-2 text-gray-700">
                         <FaLightbulb className="text-yellow-500" />
-                        <span>Teknologi Mutakhir</span>
+                        <span>Teknologi Kekinian</span>
                     </div>
                     <div className="flex items-center space-x-2 text-gray-700">
                         <FaTools className="text-blue-500" />
-                        <span>Profesional Berpengalaman</span>
+                        <span>Pro Abis</span>
                     </div>
                 </div>
             </div>

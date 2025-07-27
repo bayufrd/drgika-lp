@@ -66,10 +66,10 @@ const Booking = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800">
-            Daftar <span className="text-pink-500">Konsultasi</span>
+            Mau <span className="text-pink-500">Senyum Kece</span>? Yuk Konsul!
           </h2>
           <p className="text-xl text-gray-600 mt-4">
-            Kami Siap Melayani Anda
+            Tanpa Ribet, Anti Pusing, Auto Pede!
           </p>
         </div>
 
@@ -92,8 +92,8 @@ const Booking = () => {
                     className="w-12 h-12 text-pink-500 group-hover:text-pink-600 transition-colors"
                   />
                 }
-                title="Jadwalkan"
-                description="Pilih waktu konsultasi yang nyaman bagi Anda."
+                title="Pilih Waktu"
+                description="Kapan pun kamu nyaman, kita siap!"
               />
 
               <BookingItem
@@ -103,8 +103,8 @@ const Booking = () => {
                     className="w-12 h-12 text-pink-500 group-hover:text-pink-600 transition-colors"
                   />
                 }
-                title="Hubungi"
-                description="Isi informasi kontak Anda dengan lengkap."
+                title="Kontak Kece"
+                description="Ceritain detail kamu, biar kita paham banget!"
               />
             </div>
 
@@ -115,7 +115,7 @@ const Booking = () => {
                   value={formData.nama}
                   onChange={handleChange}
                   className="flex-1 px-6 py-3 border border-pink-500 placeholder:text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                  placeholder="Nama..."
+                  placeholder="Siapa nih?"
                   type="text"
                   required
                   title="Nama harus diisi"
@@ -125,7 +125,7 @@ const Booking = () => {
                   value={formData.usia}
                   onChange={handleChange}
                   className="flex-1 px-6 py-3 border border-pink-500 placeholder:text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                  placeholder="Usia..."
+                  placeholder="Umur berapa?"
                   type="number"
                   required
                   min="0"
@@ -143,10 +143,10 @@ const Booking = () => {
                   required
                   title="Jenis kelamin harus dipilih"
                 >
-                  <option value="">Pilih Jenis Kelamin</option>
-                  <option value="laki-laki">Laki-laki</option>
-                  <option value="perempuan">Perempuan</option>
-                  <option value="lainnya">-</option>
+                  <option value="">Gender kamu apa?</option>
+                  <option value="laki-laki">Cowok Kece</option>
+                  <option value="perempuan">Cewek Cantik</option>
+                  <option value="lainnya">Netral Aja</option>
                 </select>
                 <input
                   name="tanggal"
@@ -156,7 +156,7 @@ const Booking = () => {
                   type="date"
                   required
                   title="Tanggal harus dipilih"
-                  min={new Date().toISOString().split('T')[0]} // Mencegah memilih tanggal di masa lalu
+                  min={new Date().toISOString().split('T')[0]}
                 />
               </div>
 
@@ -177,7 +177,7 @@ const Booking = () => {
                 value={formData.tambahan}
                 onChange={handleChange}
                 className="min-h-[15rem] px-6 py-3 border border-pink-500 placeholder:text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                placeholder="Keluhan dan Permasalahan..."
+                placeholder="Curhat aja deh... Lagi kenapa sama gigi?"
                 required
                 title="Informasi tambahan harus diisi"
               />
@@ -187,7 +187,7 @@ const Booking = () => {
                   "transition duration-150 ease-in-out transform hover:scale-105"
                 )}
               >
-                Kirim Permohonan
+                Gas Konsultasi! 🚀
               </button>
             </form>
           </div>

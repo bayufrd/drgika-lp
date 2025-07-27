@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowTo from "@/components/HowTo";
 import Services from "@/components/Services";
-import Team from "@/components/Team";
+import Gallery from "@/components/Gallery";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -17,7 +17,16 @@ export const metadata: Metadata = {
     'perawatan gigi',
     'kesehatan gigi',
     'dokter gigi profesional',
-    'klinik gigi'
+    'klinik gigi',
+    'praktek drg. ika',
+    'dokter gigi solo',
+    'dokter gigi ika',
+    'ika kiromin',
+    'klinik solo',
+    'praktek solo',
+    'dokter gigi surakarta',
+    'praktek dokter gigi',
+    'drg. ika solo'
   ],
   openGraph: {
     title: 'Drg. Ika Kiromin - Praktik Dokter Gigi',
@@ -25,7 +34,6 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     // Optional: Add your website's URL
-    // url: 'https://www.websitedokteranda.com',
   },
   robots: {
     index: true,
@@ -44,7 +52,7 @@ export const metadata: Metadata = {
   },
   // Optional: Add alternate language versions if applicable
   alternates: {
-    canonical: 'https://www.websitedokteranda.com',
+    canonical: 'https://www.drg.ikakiromin.com',
   },
 };
 
@@ -55,7 +63,7 @@ const Home = () => (
 		<HowTo />
 		<Services />
 		<Benefits />
-		{/* <Team /> */}
+		<Gallery />
 		<Booking />
 		<Footer />
 	</>
