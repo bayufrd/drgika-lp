@@ -11,6 +11,7 @@ import { useState, useRef } from "react";
 import MobileMenu from "./MobileMenu";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 
+
 const Header = () => {
 	const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
 	const menuRef = useRef<HTMLElement>(null);

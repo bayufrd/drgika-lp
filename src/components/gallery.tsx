@@ -19,14 +19,14 @@ interface GalleryItem {
 
 // Contoh data galeri (bisa diganti dengan data dari backend)
 const galleryData: GalleryItem[] = [
-  {
-    id: '1',
-    title: 'Senyum Transformasi',
-    description: 'Dari malu-malu jadi PD abis!',
-    largeImage: '/images/gallery-1-large.jpg',
-    smallImage: '/images/gallery-1-small.jpg',
-    category: 'sesudah'
-  },
+//   {
+//     id: '1',
+//     title: 'Senyum Transformasi',
+//     description: 'Dari malu-malu jadi PD abis!',
+//     largeImage: '/images/gallery-1-large.jpg',
+//     smallImage: '/images/gallery-1-small.jpg',
+//     category: 'sesudah'
+//   },
   // Tambahkan lebih banyak item...
 ];
 

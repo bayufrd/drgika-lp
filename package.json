@@ -27,6 +27,7 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
+    "@next/swc-darwin-x64": "^15.4.4",
     "@types/react-slick": "^0.23.10",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
