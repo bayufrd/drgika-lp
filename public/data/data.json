@@ -283,12 +283,22 @@
             {
                 "name": "Instagram",
                 "icon": "FaInstagram",
-                "link": "https://www.instagram.com/drg.ikakiromin"
+                "link": "https://www.instagram.com/doktergigiika_solo"
             },
             {
                 "name": "Google Maps",
                 "icon": "FaMapMarkerAlt",
                 "link": "https://maps.app.goo.gl/FPcFvopPfLWhPU2WA"
+            },
+            {
+                "name": "TikTok",
+                "icon": "FaTiktok",
+                "link": "https://www.tiktok.com/@@praktekdrgikagrogol"
+            },
+            {
+                "name": "Facebook",
+                "icon": "FaFacebook",
+                "link": "https://www.facebook.com/bilqis.salsa"
             }
         ],
         "contact": {

@@ -65,16 +65,7 @@ const Footer = () => {
 							{[
 								...footer.socialMedia,
 								// Add additional social media if not in the original JSON
-								{
-									name: 'TikTok',
-									icon: 'FaTiktok',
-									link: 'https://www.tiktok.com/@drg.ikakiromin'
-								},
-								{
-									name: 'Facebook',
-									icon: 'FaFacebook',
-									link: 'https://www.facebook.com/drg.ikakiromin'
-								}
+								
 							].map((social) => (
 								<a
 									key={social.name}
