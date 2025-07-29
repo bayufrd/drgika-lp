@@ -6,6 +6,7 @@ import Image from "next/image";
 import React, { MouseEvent } from 'react';
 import { LuImagePlus, LuSearch, LuX } from "react-icons/lu";
 import { motion, AnimatePresence } from 'framer-motion';
+import Data from "public/data/data.json";
 
 // Definisi tipe untuk item galeri
 interface PicturesItem {
@@ -14,39 +15,35 @@ interface PicturesItem {
   description: string;
   largeImage: string;
   smallImage: string;
-  category: 'sebelum' | 'sesudah' | 'proses';
+  category: string;
 }
 
-// Contoh data galeri (bisa diganti dengan data dari backend)
-const PicturesData: PicturesItem[] = [
-//   {
-//     id: '1',
-//     title: 'Senyum Transformasi',
-//     description: 'Dari malu-malu jadi PD abis!',
-//     largeImage: '/images/Pictures-1-large.jpg',
-//     smallImage: '/images/Pictures-1-small.jpg',
-//     category: 'sesudah'
-//   },
-  // Tambahkan lebih banyak item...
-];
-
 const Pictures: React.FC = () => {
+  const { pictures } = Data;
+
   // State untuk manajemen galeri
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<PicturesItem | null>(null);
 
   // Filter gambar berdasarkan kategori
   const filteredPictures = selectedCategory
-    ? PicturesData.filter(item => item.category === selectedCategory)
-    : PicturesData;
+    ? pictures.items.filter(item => item.category === selectedCategory)
+    : pictures.items;
 
-  // Kategori filter
-  const categories = [
-    { label: 'Semua', value: null },
-    { label: 'Sebelum', value: 'sebelum' },
-    { label: 'Proses', value: 'proses' },
-    { label: 'Sesudah', value: 'sesudah' }
-  ];
+  // Fungsi untuk memastikan tipe PicturesItem
+  const handleImageSelect = (item: any) => {
+    // Pastikan item memiliki semua properti yang diperlukan
+    const formattedItem: PicturesItem = {
+      id: item.id || 'default-id',
+      title: item.title || '',
+      description: item.description || '',
+      largeImage: item.largeImage || item.smallImage || '',
+      smallImage: item.smallImage || '',
+      category: item.category || ''
+    };
+
+    setSelectedImage(formattedItem);
+  };
 
   return (
     <FlexSection
@@ -61,16 +58,16 @@ const Pictures: React.FC = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-gray-800">
-            Behind The <span className="text-pink-500">Senyum Kece</span>
+            {pictures.mainTitle.text} <span className="text-pink-500">{pictures.mainTitle.highlight}</span>
           </h2>
           <p className="text-xl text-gray-600 mt-4">
-            Perjalanan Kece Menuju Senyum Percaya Diri
+            {pictures.subtitle}
           </p>
         </motion.div>
 
         {/* Kategori Filter */}
         <div className="flex justify-center space-x-4 mb-12">
-          {categories.map((category) => (
+          {pictures.categories.map((category) => (
             <button
               key={category.value || 'all'}
               onClick={() => setSelectedCategory(category.value)}
@@ -94,13 +91,13 @@ const Pictures: React.FC = () => {
           <AnimatePresence>
             {filteredPictures.map((item) => (
               <motion.div
-                key={item.id}
+                key={item.id || 'default-id'}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 className="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
-                onClick={() => setSelectedImage(item)}
+                onClick={() => handleImageSelect(item)}
               >
                 <Image
                   src={item.smallImage}
@@ -162,13 +159,10 @@ const Pictures: React.FC = () => {
         {/* Footer Section */}
         <div className="mt-16 bg-pink-50 p-8 rounded-lg shadow-md text-center">
           <h3 className="text-2xl font-bold mb-6 text-gray-800">
-            Cerita <span className="text-pink-500">Di Balik Senyum</span>
+            {pictures.footer.title.text} <span className="text-pink-500">{pictures.footer.title.highlight}</span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Setiap foto adalah perjalanan transformasi.
-            Dari senyum yang kurang percaya diri hingga
-            senyum yang memukau - Drg. Ika ada di sini untuk
-            membantu Anda menemukan kepercayaan diri Anda! 💫✨
+            {pictures.footer.description}
           </p>
         </div>
       </div>

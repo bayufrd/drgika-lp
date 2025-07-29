@@ -9,31 +9,54 @@ import Pictures from "@/components/Pictures";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Drg. Ika Kiromin - Praktik Dokter Gigi Profesional',
-  description: 'Praktik dokter gigi profesional Drg. Ika Kiromin. Menyediakan layanan kesehatan gigi terpercaya, perawatan berkualitas, dan solusi kesehatan gigi modern untuk seluruh keluarga.',
+  title: 'Drg. Ika Kiromin - Praktik Dokter Gigi Profesional di Solo & Sekitarnya',
+  description: 'Praktik dokter gigi profesional Drg. Ika Kiromin di Solo, Surakarta, dan Sukoharjo. Menyediakan layanan kesehatan gigi terpercaya, perawatan berkualitas, dan solusi kesehatan gigi modern untuk seluruh keluarga.',
   keywords: [
+    // Existing keywords
     'dokter gigi',
     'praktik gigi',
     'perawatan gigi',
     'kesehatan gigi',
     'dokter gigi profesional',
     'klinik gigi',
-    'praktek drg. ika',
+    
+    // Localized and specific keywords
     'dokter gigi solo',
-    'dokter gigi ika',
-    'ika kiromin',
-    'klinik solo',
-    'praktek solo',
-    'dokter gigi surakarta',
-    'praktek dokter gigi',
-    'drg. ika solo'
+    'klinik gigi surakarta',
+    'praktik dokter gigi sukoharjo',
+    'drg. ika kiromin solo',
+    'dokter gigi terdekat solo',
+    'klinik gigi berpengalaman',
+    'perawatan gigi profesional',
+    'dokter gigi terpercaya',
+    
+    // Additional local SEO keywords
+    'praktik dokter gigi wilayah solo',
+    'layanan kesehatan gigi solo',
+    'klinik gigi bersih dan modern',
+    'dokter gigi berpengalaman di solo',
+    'perawatan gigi komprehensif'
   ],
   openGraph: {
-    title: 'Drg. Ika Kiromin - Praktik Dokter Gigi',
-    description: 'Praktik dokter gigi profesional dengan layanan komprehensif dan perawatan berkualitas.',
+    title: 'Drg. Ika Kiromin - Praktik Dokter Gigi Profesional di Solo',
+    description: 'Praktik dokter gigi profesional terpercaya di wilayah Solo, Surakarta, dan Sukoharjo. Perawatan berkualitas dan komprehensif untuk kesehatan gigi keluarga.',
     type: 'website',
     locale: 'id_ID',
-    // Optional: Add your website's URL
+    images: [
+      {
+        url: '/path/to/clinic-image.jpg', // Replace with actual image path
+        width: 1200,
+        height: 630,
+        alt: 'Praktik Dokter Gigi Drg. Ika Kiromin di Solo'
+      }
+    ],
+    url: 'https://drg.ikakiromin.com', // Ensure this is the correct domain
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Drg. Ika Kiromin - Dokter Gigi Profesional Solo',
+    description: 'Layanan kesehatan gigi profesional di Solo, Surakarta, dan Sukoharjo.',
+    images: ['/path/to/clinic-image.jpg'] // Same image as OpenGraph
   },
   robots: {
     index: true,
@@ -46,16 +69,19 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Optional: Add verification for webmaster tools
   verification: {
     google: 'your-google-site-verification-code', // Optional
+    // Consider adding other webmaster tool verifications if used
   },
-  // Optional: Add alternate language versions if applicable
   alternates: {
-    canonical: 'https://.drg.ikakiromin.com',
+    canonical: 'https://drg.ikakiromin.com', // Confirm the exact domain
   },
+  // Optional: Add local business structured data
+  other: {
+    'og:type': 'medical:clinic',
+    'og:locale:alternate': ['en_US', 'id_ID'],
+  }
 };
-
 const Home = () => (
 	<>
 		<Header />

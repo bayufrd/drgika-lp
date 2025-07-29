@@ -1,11 +1,30 @@
 "use client";
 
+import { useState } from "react";
 import SectionHeading from "./SectionHeading";
 import FlexSection from "./FlexSection";
 import Image from "next/image";
-import { LuCalendar, LuPhone, LuMessageSquare } from "react-icons/lu";
+import { 
+    LuCalendar, 
+    LuPhone, 
+    LuMessageSquare 
+} from "react-icons/lu";
 import twclsx from "@/utils/twclsx";
-import { useState } from "react";
+import Data from "public/data/data.json";
+
+// Helper function to map icon names to actual icons
+const getIconByName = (iconName: string, className?: string) => {
+    switch(iconName) {
+        case 'LuCalendar':
+            return <LuCalendar className={className} />;
+        case 'LuPhone':
+            return <LuPhone className={className} />;
+        case 'LuMessageSquare':
+            return <LuMessageSquare className={className} />;
+        default:
+            return null;
+    }
+};
 
 const BookingItem = ({
   icon,
@@ -39,6 +58,7 @@ const BookingItem = ({
 );
 
 const Booking = () => {
+  const { booking } = Data;
   const [formData, setFormData] = useState({
     nama: '',
     usia: '',
@@ -55,31 +75,27 @@ const Booking = () => {
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Construct WhatsApp message
-    const message = `Halo Bu Dokter Gigi Ika Kiromin.
-Melalui Konsultasi via Website diarahkan kesini
+    const template = booking.templatePesan;
 
-Nama : ${formData.nama}
-Umur : ${formData.usia}
-Gender : ${formData.jenisKelamin}
-Pada Tanggal : ${formData.tanggal} , jam ${formData.jam}
-Ingin Konsultasi mengenai permasalahan :
-${formData.tambahan}
+    const renderTemplate = (template: string, data: typeof formData) => {
+        return template.replace(/{{(\w+)}}/g, (match, key) => {
+            return data[key as keyof typeof formData] || match;
+        });
+    };
 
-Terimakasih`;
+    const message = renderTemplate(template, formData);
 
-    // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
 
-    // Replace with actual WhatsApp number (use international format without + or 0)
-    const phoneNumber = '+6281329970317'; // Example number, replace with actual clinic number
+    const phoneNumber = Data.booking.phoneNumber; 
 
-    // Open WhatsApp in a new tab
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-  };
+};
+
   return (
     <FlexSection
       sectionClassName="py-16 bg-white relative"
@@ -89,10 +105,10 @@ Terimakasih`;
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800">
-            Mau <span className="text-pink-500">Senyum Kece</span>? Yuk Konsul!
+            {booking.mainTitle.text} <span className="text-pink-500">{booking.mainTitle.highlight}</span>{booking.mainTitle.afterHighlight}
           </h2>
           <p className="text-xl text-gray-600 mt-4">
-            Tanpa Ribet, Anti Pusing, Auto Pede!
+            {booking.subtitle}
           </p>
         </div>
 
@@ -100,36 +116,29 @@ Terimakasih`;
           <div className="flex-1 hidden lg:block">
             <Image
               className="w-full animate-float"
-              src="/images/booking.svg"  // From public folder
+              src={booking.bookingImage}
               alt="booking"
-              width={500}  // specify width
-              height={500} // specify height
+              width={500}
+              height={500}
             />
           </div>
 
           <div className="flex-1">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <BookingItem
-                number={1}
-                icon={
-                  <LuCalendar
-                    className="w-12 h-12 text-pink-500 group-hover:text-pink-600 transition-colors"
-                  />
-                }
-                title="Pilih Waktu"
-                description="Kapan pun kamu nyaman, kita siap!"
-              />
-
-              <BookingItem
-                number={2}
-                icon={
-                  <LuPhone
-                    className="w-12 h-12 text-pink-500 group-hover:text-pink-600 transition-colors"
-                  />
-                }
-                title="Kontak Kece"
-                description="Ceritain detail kamu, biar kita paham banget!"
-              />
+              {booking.bookingSteps.map((step) => (
+                <BookingItem
+                  key={step.number}
+                  number={step.number}
+                  icon={
+                    getIconByName(
+                      step.icon, 
+                      "w-12 h-12 text-pink-500 group-hover:text-pink-600 transition-colors"
+                    )
+                  }
+                  title={step.title}
+                  description={step.description}
+                />
+              ))}
             </div>
 
             <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6">
@@ -139,9 +148,9 @@ Terimakasih`;
                   value={formData.nama}
                   onChange={handleChange}
                   className="flex-1 px-6 py-3 border border-pink-500 placeholder:text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                  placeholder="Siapa nih?"
-                  type="text"
-                  required
+                  placeholder={booking.formFields.nama.placeholder}
+                  type={booking.formFields.nama.type}
+                  required={booking.formFields.nama.required}
                   title="Nama harus diisi"
                 />
                 <input
@@ -149,11 +158,11 @@ Terimakasih`;
                   value={formData.usia}
                   onChange={handleChange}
                   className="flex-1 px-6 py-3 border border-pink-500 placeholder:text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                  placeholder="Umur berapa?"
-                  type="number"
-                  required
-                  min="0"
-                  max="120"
+                  placeholder={booking.formFields.usia.placeholder}
+                  type={booking.formFields.usia.type}
+                  required={booking.formFields.usia.required}
+                  min={booking.formFields.usia.min}
+                  max={booking.formFields.usia.max}
                   title="Usia harus diisi antara 0-120"
                 />
               </div>
@@ -167,18 +176,19 @@ Terimakasih`;
                   required
                   title="Jenis kelamin harus dipilih"
                 >
-                  <option value="">Gender kamu apa?</option>
-                  <option value="laki-laki">Cowok Kece</option>
-                  <option value="perempuan">Cewek Cantik</option>
-                  <option value="lainnya">Netral Aja</option>
+                  {booking.formFields.jenisKelamin.options.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
                 </select>
                 <input
                   name="tanggal"
                   value={formData.tanggal}
                   onChange={handleChange}
                   className="flex-1 px-6 py-3 border border-pink-500 text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                  type="date"
-                  required
+                  type={booking.formFields.tanggal.type}
+                  required={booking.formFields.tanggal.required}
                   title="Tanggal harus dipilih"
                   min={new Date().toISOString().split('T')[0]}
                 />
@@ -190,8 +200,8 @@ Terimakasih`;
                   value={formData.jam}
                   onChange={handleChange}
                   className="flex-1 px-6 py-3 border border-pink-500 text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                  type="time"
-                  required
+                  type={booking.formFields.jam.type}
+                  required={booking.formFields.jam.required}
                   title="Jam harus dipilih"
                 />
               </div>
@@ -201,8 +211,8 @@ Terimakasih`;
                 value={formData.tambahan}
                 onChange={handleChange}
                 className="min-h-[15rem] px-6 py-3 border border-pink-500 placeholder:text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                placeholder="Curhat aja deh... Lagi kenapa sama gigi?"
-                required
+                placeholder={booking.formFields.tambahan.placeholder}
+                required={booking.formFields.tambahan.required}
                 title="Informasi tambahan harus diisi"
               />
               <button
@@ -212,7 +222,7 @@ Terimakasih`;
                   "transition duration-150 ease-in-out transform hover:scale-105"
                 )}
               >
-                Gas Konsultasi! 🚀
+                {booking.submitButton.text}
               </button>
             </form>
           </div>

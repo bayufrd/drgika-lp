@@ -9,6 +9,8 @@ interface ImageProps {
   smallImage: string;
   loading?: "lazy" | "eager";
   className?: string;
+  width?: number;
+  height?: number;
 }
 
 export const Image: React.FC<ImageProps> = ({ 
@@ -16,7 +18,9 @@ export const Image: React.FC<ImageProps> = ({
   largeImage, 
   smallImage, 
   loading = "lazy",
-  className = ""
+  className = "",
+  width = 300,  // Default width
+  height = 200  // Default height
 }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
@@ -24,8 +28,12 @@ export const Image: React.FC<ImageProps> = ({
     <img 
       src={smallImage} 
       alt={title} 
+      width={width}
+      height={height}
       className={`w-full h-full object-cover ${className}`}
       loading={loading}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     />
   );
 };

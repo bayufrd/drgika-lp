@@ -2,21 +2,22 @@
 
 import FlexSection from "@/components/FlexSection";
 import Link from 'next/link';
-import { 
-  LuSmartphone, 
-  LuCalendar, 
-  LuMapPin 
+import {
+  LuSmartphone,
+  LuCalendar,
+  LuMapPin
 } from "react-icons/lu";
 import twclsx from "@/utils/twclsx";
 import { useCallback } from 'react';
+import Data from "public/data/data.json"
 
 // Custom hook untuk smooth scroll
 const useSmoothScroll = () => {
   const scrollToSection = useCallback((sectionId: string) => {
     const section = document.querySelector(sectionId);
-    
+
     if (section) {
-      section.scrollIntoView({ 
+      section.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -43,10 +44,10 @@ const HowTo = () => {
     >
       <div className="flex-1 space-y-4">
         <h2 className="text-4xl font-bold text-white drop-shadow-md">
-          Cara Mudah Kunjungi Drg. Ika
+          {Data["how-to"].title}
         </h2>
         <p className="text-xl text-white/90">
-          Cuma 3 langkah simple, dijamin auto kelar!
+          {Data["how-to"].subtitle}
         </p>
       </div>
       <div
@@ -55,31 +56,30 @@ const HowTo = () => {
           "sm:flex-row sm:items-center xl:mt-0"
         )}
       >
-        <Link 
-          href="https://wa.me/+6287836015516" 
+        <Link
+          href={Data["how-to"].icon1}
           target="_blank"
           className="cursor-pointer group flex flex-col items-center text-white hover:scale-105 transition-all"
         >
           <LuSmartphone className="w-[2.6rem] h-[2.6rem] sm:mb-4 group-hover:text-yellow-300" />
-          <span>Kontak Dokter</span>
+          <span>{Data["how-to"].text1}</span>
         </Link>
-        
-        {/* Modifikasi link booking untuk smooth scroll */}
-        <div 
-          onClick={handleSmoothScroll('#booking')}
+
+        <div
+          onClick={handleSmoothScroll(Data["how-to"].icon2)}
           className="cursor-pointer group flex flex-col items-center text-white hover:scale-105 transition-all"
         >
           <LuCalendar className="w-[2.6rem] h-[2.6rem] sm:mb-4 group-hover:text-yellow-300" />
-          <span>Jadwalkan Temu</span>
+          <span>{Data["how-to"].text2}</span>
         </div>
-        
-        <Link 
-          href="https://maps.app.goo.gl/FPcFvopPfLWhPU2WA" 
+
+        <Link
+          href={Data["how-to"].icon3}
           target="_blank"
           className="cursor-pointer group flex flex-col items-center text-white hover:scale-105 transition-all"
         >
           <LuMapPin className="w-[2.6rem] h-[2.6rem] sm:mb-4 group-hover:text-yellow-300" />
-          <span>Kunjungi Klinik</span>
+          <span>{Data["how-to"].text3}</span>
         </Link>
       </div>
     </FlexSection>

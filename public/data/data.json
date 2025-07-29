@@ -1,0 +1,307 @@
+{
+    "header": {
+        "name": {
+            "full": "Drg. Ika Kiromin Baroroh",
+            "short": "Ika Kiromin Baroroh",
+            "prefix": "Drg."
+        },
+        "contact": {
+            "phone": "0813 2997 0317",
+            "whatsapp": "https://wa.me/+6281329970317",
+            "whatsapp-number": "+6281329970317",
+            "email": "ikagigi48@gmail.com"
+        },
+        "location": {
+            "address": "Jl. Raya Grogol No.174, Dusun III, Grogol, Kec. Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552",
+            "coordinates": {
+                "latitude": "-7.5757",
+                "longitude": "110.8243"
+            },
+            "gmaps": "https://maps.app.goo.gl/FPcFvopPfLWhPU2WA"
+        },
+        "operatingHours": {
+            "morning": {
+                "start": "08:00",
+                "end": "11:00",
+                "label": "Pagi"
+            },
+            "evening": {
+                "start": "15:30",
+                "end": "20:00",
+                "label": "Sore"
+            }
+        }
+    },
+    "hero": {
+        "title": {
+            "main": "Senyum Kece,",
+            "subTitle": " Tanpa Ribet!",
+            "highlight": "Gigi Sehat"
+        },
+        "description": "Klinik gigi masa kini yang bikin kamu nyaman. Perawatan professional, suasana santai, dan Dokter kekinian!",
+        "detail": "Jadwal Praktek",
+        "detail-sub": {
+            "first": {
+                "title": "Praktek UMUM",
+                "day": "Senin - Jumat",
+                "time": "Pagi: 09.00 - 11.00",
+                "time2": "Sore: 15.00 - 20.00"
+            },
+            "second": {
+                "title": "Ptaktek BPJS",
+                "day": "Senin - Sabtu",
+                "time": "Pagi: 09.00 - 11.00",
+                "time2": "Sore: 15.30 - 17.30"
+            },
+            "add-ons": "Sabut & Minggu: Konsultasi via tombol di bawah"
+        },
+        "buttons": {
+            "primary": {
+                "text": "Konsultasi Sekarang",
+                "link": "#booking"
+            },
+            "secondary": {
+                "text": "Jelajahi Layanan",
+                "link": "#services"
+            }
+        },
+        "heroImage": "/images/hero.svg",
+        "heroImageAlt": "Ilustrasi Perawatan Gigi Modern"
+    },
+    "how-to": {
+        "title": "Cara Mudah Kunjungi Drg. Ika",
+        "subtitle": "Cuma 3 langkah simple, dijamin auto kelar!",
+        "icon1": "https://wa.me/+6281329970317",
+        "text1": "Kontak Dokter",
+        "icon2": "#booking",
+        "text2": "Jadwalkan Temu",
+        "icon3": "https://maps.app.goo.gl/FPcFvopPfLWhPU2WA",
+        "text3": "Kunjungi Klinik"
+    },"services": {
+        "mainTitle": {
+            "text": "Gigi Kece ala Drg. Ika",
+            "highlight": "Kece"
+        },
+        "subtitle": "Solusi Anti-Pusing Buat Kesehatan Gigiku!",
+        "servicesItems": [
+            {
+                "number": 1,
+                "icon": "LuShieldCheck",
+                "title": "Deteksi Dini Gigi Memble",
+                "description": "Cegah masalah gigi sebelum makin parah! Teknologi canggih, dokter gaul."
+            },
+            {
+                "number": 2,
+                "icon": "LuSmile", 
+                "title": "Senyum Kece Upgrade",
+                "description": "Transform gigimu jadi kece abis! Estetika terkini, hasilnya auto bikin PD."
+            },
+            {
+                "number": 3,
+                "icon": "LuStethoscope",
+                "title": "Konsultasi Bebas Pusing", 
+                "description": "Curhat soal gigi sambil ngopi! Pengalaman puluhan tahun, solusi anti ribet."
+            }
+        ],
+        "additionalServicesTitle": {
+            "text": "Layanan Lengkap",
+            "highlight": "Drg. Ika Kiromin"
+        },
+        "additionalServices": [
+            "Pencabutan Gigi Anak & Dewasa",
+            "Pembersihan Karang Gigi / Scalling",
+            "Pembuatan Gigi Palsu / Protesa",
+            "Veneer, Crown, Bridge",
+            "Perawatan Saluran Akar / Endodonti",
+            "Pemasangan Behel",
+            "Pemutihan Gigi / Bleaching",
+            "Penambalan Gigi Dewasa & Anak",
+            "Operasi Gigi Miring / Bungsu",
+            "Dan Yang Berhubungan Dengan Gigi"
+        ]
+    },
+    "benefits": {
+        "mainTitle": {
+            "text": "Rahasia",
+            "highlight": "Kece",
+            "afterHighlight": "Dibalik Senyummu"
+        },
+        "subtitle": {
+            "before": "3 Steps ",
+            "highlight": "Level Up ",
+            "after": "Gigi Gahar!"
+        },
+        "benefitItems": [
+            {
+                "number": 1,
+                "image": "/images/laser.svg",
+                "imageAlt": "Laser Modern",
+                "title": "Laser Gokil Tanpa Rasa Sakit",
+                "description": "Teknologi laser kece yang bikin proses perawatan secepat nge-scroll Instagram. Dijamin anti sakit, anti ribet!"
+            },
+            {
+                "number": 2,
+                "image": "/images/scanner.svg",
+                "imageAlt": "Pemindai 3D",
+                "title": "Scanning Super Akurat",
+                "description": "Teknologi 3D yang lebih presisi dari filter Instagram. Deteksi masalah gigi secepat loading meme!"
+            },
+            {
+                "number": 3,
+                "image": "/images/implant.svg",
+                "imageAlt": "Implan Profesional",
+                "title": "Implan Pro Sejuta Umat",
+                "description": "Ahli implan dengan pengalaman lebih bernostalgia dari TikTok. Tingkat keberhasilan? Auto bikin PD!"
+            }
+        ],
+        "whyUs": {
+            "title": "Kenapa Harus Kita?",
+            "items": [
+                {
+                    "icon": "FaCheckCircle",
+                    "iconColor": "text-green-500",
+                    "text": "Super Aman"
+                },
+                {
+                    "icon": "FaLightbulb",
+                    "iconColor": "text-yellow-500",
+                    "text": "Teknologi Kekinian"
+                },
+                {
+                    "icon": "FaTools",
+                    "iconColor": "text-blue-500",
+                    "text": "Pro Abis"
+                }
+            ]
+        }
+    },
+    "pictures": {
+        "mainTitle": {
+            "text": "Behind The",
+            "highlight": "Senyum Kece"
+        },
+        "subtitle": "Perjalanan Kece Menuju Senyum Percaya Diri",
+        "categories": [
+            { "label": "Semua", "value": null },
+            { "label": "Sebelum", "value": "sebelum" },
+            { "label": "Proses", "value": "proses" },
+            { "label": "Sesudah", "value": "sesudah" }
+        ],
+        "items": [
+            {
+                "id": null,
+                "title": "",
+                "description": "",
+                "largeImage": "",
+                "smallImage": "",
+                "category": ""
+            }
+        ],
+        "footer": {
+            "title": {
+                "text": "Cerita",
+                "highlight": "Di Balik Senyum"
+            },
+            "description": "Setiap foto adalah perjalanan transformasi. Dari senyum yang kurang percaya diri hingga senyum yang memukau - Drg. Ika ada di sini untuk membantu Anda menemukan kepercayaan diri Anda! 💫✨"
+        }
+    },
+    "booking": {
+        "mainTitle": {
+            "text": "Mau",
+            "highlight": "Senyum Kece",
+            "afterHighlight": "? Yuk Konsul!"
+        },
+        "subtitle": "Tanpa Ribet, Anti Pusing, Auto Pede!",
+        "bookingSteps": [
+            {
+                "number": 1,
+                "icon": "LuCalendar",
+                "title": "Pilih Waktu",
+                "description": "Kapan pun kamu nyaman, kita siap!"
+            },
+            {
+                "number": 2,
+                "icon": "LuPhone",
+                "title": "Kontak Kece",
+                "description": "Ceritain detail kamu, biar kita paham banget!"
+            }
+        ],
+        "formFields": {
+            "nama": {
+                "placeholder": "Siapa nih?",
+                "type": "text",
+                "required": true
+            },
+            "usia": {
+                "placeholder": "Umur berapa?",
+                "type": "number",
+                "min": 0,
+                "max": 120,
+                "required": true
+            },
+            "jenisKelamin": {
+                "placeholder": "Gender kamu apa?",
+                "options": [
+                    {"value": "", "label": "Gender kamu apa?"},
+                    {"value": "laki-laki", "label": "Cowok Kece"},
+                    {"value": "perempuan", "label": "Cewek Cantik"},
+                    {"value": "lainnya", "label": "Netral Aja"}
+                ]
+            },
+            "tanggal": {
+                "type": "date",
+                "required": true
+            },
+            "jam": {
+                "type": "time",
+                "required": true
+            },
+            "tambahan": {
+                "placeholder": "Curhat aja deh... Lagi kenapa sama gigi?",
+                "required": true
+            }
+        },
+        "submitButton": {
+            "text": "Gas Konsultasi! 🚀"
+        },
+        "bookingImage": "/images/booking.svg",
+        "phoneNumber" : "+6281329970317",
+        "templatePesan": "Halo Bu Dokter Gigi Ika Kiromin.\nMelalui Konsultasi via Website diarahkan kesini\n\nNama : {{nama}}\nUmur : {{usia}}\nGender : {{jenisKelamin}}\nPada Tanggal : {{tanggal}} , jam {{jam}}\nIngin Konsultasi mengenai permasalahan :\n{{tambahan}}\n\nTerimakasih"
+    },
+    "footer": {
+        "copyrightYear": 2025,
+        "companyName": {
+            "text": "Dastrevas.Coding",
+            "link": "https://dastrevas.com"
+        },
+        "socialMedia": [
+            {
+                "name": "WhatsApp",
+                "icon": "FaWhatsapp",
+                "link": "https://wa.me/+6281329970317"
+            },
+            {
+                "name": "Instagram",
+                "icon": "FaInstagram",
+                "link": "https://www.instagram.com/drg.ikakiromin"
+            },
+            {
+                "name": "Google Maps",
+                "icon": "FaMapMarkerAlt",
+                "link": "https://maps.app.goo.gl/FPcFvopPfLWhPU2WA"
+            }
+        ],
+        "contact": {
+            "phone": "+62 813 2997 0317",
+            "email": "ika@doktergigisolo.id"
+        },
+        "address": "Jl. Raya Grogol No.174, Dusun III, Grogol, Kec. Grogol, Kabupaten Sukoharjo",
+        "quickLinks": [
+            { "label": "Prosedur", "href": "#prosedur" },
+            { "label": "Layanan", "href": "#services" },
+            { "label": "Keuntungan", "href": "#benefits" },
+            { "label": "Galleri", "href": "#galeri" },
+            { "label": "Konsultasi", "href": "#booking" }
+        ]
+    }
+}
