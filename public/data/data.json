@@ -189,12 +189,60 @@
         ],
         "items": [
             {
-                "id": null,
-                "title": "",
-                "description": "",
-                "largeImage": "",
-                "smallImage": "",
-                "category": ""
+                "id": 1,
+                "title": "Dental Bridge Sebelum [1]",
+                "description": "Dental Bridge Sebelum",
+                "largeImage": "/data/dentalbridgesebelum.jpeg",
+                "smallImage": "/data/dentalbridgesebelum.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 2,
+                "title": "Dental Bridge Sesudah [1]",
+                "description": "Dental Bridge Sesudah",
+                "largeImage": "/data/dentalbridgesesudah.jpeg",
+                "smallImage": "/data/dentalbridgesesudah.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 3,
+                "title": "Praktek Drg. Ika",
+                "description": "Klinik Solo",
+                "largeImage": "/data/mama2.jpeg",
+                "smallImage": "/data/mama2.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 4,
+                "title": "Praktek Drg. Ika",
+                "description": "Klinik Solo",
+                "largeImage": "/data/mama3.jpeg",
+                "smallImage": "/data/mama3.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 5,
+                "title": "Praktek Drg. Ika",
+                "description": "Klinik Solo",
+                "largeImage": "/data/mama4.jpeg",
+                "smallImage": "/data/mama4.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 6,
+                "title": "Praktek Drg. Ika",
+                "description": "Klinik Solo",
+                "largeImage": "/data/mama5.jpeg",
+                "smallImage": "/data/mama5.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 7,
+                "title": "Praktek Drg. Ika",
+                "description": "Klinik Solo",
+                "largeImage": "/data/mama1.jpeg",
+                "smallImage": "/data/mama1.jpeg",
+                "category": "proses"
             }
         ],
         "footer": {

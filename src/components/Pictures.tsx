@@ -118,6 +118,7 @@ const Pictures: React.FC = () => {
         </motion.div>
 
         {/* Modal Gambar */}
+        {/* Modal Gambar */}
         {selectedImage && (
           <div
             className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
@@ -129,13 +130,26 @@ const Pictures: React.FC = () => {
               className="max-w-4xl w-full bg-white rounded-xl overflow-hidden shadow-2xl"
               onClick={(e: MouseEvent) => e.stopPropagation()}
             >
-              <div className="relative">
+              <div
+                className="relative w-full h-[70vh] bg-gray-300 flex items-center justify-center"
+                style={{ backgroundColor: '#D3D3D3' }}
+              >
                 <Image
                   src={selectedImage.largeImage}
                   alt={selectedImage.title}
                   width={1200}
                   height={800}
-                  className="w-full max-h-[70vh] object-cover"
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain', // This ensures the full image is visible
+                    objectPosition: 'center'
+                  }}
+                  onError={(e) => {
+                    const imgElement = e.currentTarget;
+                    imgElement.style.display = 'none'; // Hide the image
+                    imgElement.parentElement?.classList.add('bg-gray-300');
+                  }}
                 />
                 <button
                   className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-pink-100 transition"
