@@ -9,6 +9,16 @@ import Pictures from "@/components/Pictures";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" }
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ]
+  },
   title: 'Drg. Ika Kiromin - Praktik Dokter Gigi Profesional di Solo & Sekitarnya',
   description: 'Praktik dokter gigi profesional Drg. Ika Kiromin di Solo, Surakarta, dan Sukoharjo. Menyediakan layanan kesehatan gigi terpercaya, perawatan berkualitas, dan solusi kesehatan gigi modern untuk seluruh keluarga.',
   keywords: [
@@ -19,7 +29,7 @@ export const metadata: Metadata = {
     'kesehatan gigi',
     'dokter gigi profesional',
     'klinik gigi',
-    
+
     // Localized and specific keywords
     'dokter gigi solo',
     'klinik gigi surakarta',
@@ -29,7 +39,7 @@ export const metadata: Metadata = {
     'klinik gigi berpengalaman',
     'perawatan gigi profesional',
     'dokter gigi terpercaya',
-    
+
     // Additional local SEO keywords
     'praktik dokter gigi wilayah solo',
     'layanan kesehatan gigi solo',
@@ -83,16 +93,16 @@ export const metadata: Metadata = {
   }
 };
 const Home = () => (
-	<>
-		<Header />
-		<Hero />
-		<HowTo />
-		<Services />
-		<Benefits />
-		<Pictures />
-		<Booking />
-		<Footer />
-	</>
+  <>
+    <Header />
+    <Hero />
+    <HowTo />
+    <Services />
+    <Benefits />
+    <Pictures />
+    <Booking />
+    <Footer />
+  </>
 );
 
 export default Home;
