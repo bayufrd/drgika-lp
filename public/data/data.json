@@ -45,15 +45,17 @@
                 "title": "Praktek UMUM",
                 "day": "Senin - Jumat",
                 "time": "Pagi: 09.00 - 11.00",
-                "time2": "Sore: 15.00 - 20.00"
+                "time2": "Sore: 15.30 - 20.00",
+                "time3": "Sabtu: Sore 15.30 - 17.30"
             },
             "second": {
                 "title": "Ptaktek BPJS",
-                "day": "Senin - Sabtu",
+                "day": "Senin - Jumat",
                 "time": "Pagi: 09.00 - 11.00",
-                "time2": "Sore: 15.30 - 17.30"
+                "time2": "Sore: 15.30 - 17.30",
+                "time3": "Sabtu: Sore 15.30 - 18.30"
             },
-            "add-ons": "Sabut & Minggu: Konsultasi via tombol di bawah"
+            "add-ons": "Janji & Konsultasi via tombol di bawah"
         },
         "buttons": {
             "primary": {
@@ -148,10 +150,10 @@
             },
             {
                 "number": 3,
-                "image": "/images/implant.svg",
-                "imageAlt": "Implan Profesional",
-                "title": "Implan Pro Sejuta Umat",
-                "description": "Ahli implan dengan pengalaman lebih bernostalgia dari TikTok. Tingkat keberhasilan? Auto bikin PD!"
+                "image": "/images/dental-bridge.svg",
+                "imageAlt": "Bridge Profesional",
+                "title": "Bridge Dental Pro Sejuta Umat",
+                "description": "Ahli Bridge Dental dengan pengalaman lebih bernostalgia dari TikTok. Tingkat keberhasilan? Auto bikin PD!"
             }
         ],
         "whyUs": {

@@ -4,26 +4,27 @@ import { useState } from "react";
 import SectionHeading from "./SectionHeading";
 import FlexSection from "./FlexSection";
 import Image from "next/image";
-import { 
-    LuCalendar, 
-    LuPhone, 
-    LuMessageSquare 
+import React, { Fragment } from "react";
+import {
+  LuCalendar,
+  LuPhone,
+  LuMessageSquare
 } from "react-icons/lu";
 import twclsx from "@/utils/twclsx";
 import Data from "public/data/data.json";
 
 // Helper function to map icon names to actual icons
 const getIconByName = (iconName: string, className?: string) => {
-    switch(iconName) {
-        case 'LuCalendar':
-            return <LuCalendar className={className} />;
-        case 'LuPhone':
-            return <LuPhone className={className} />;
-        case 'LuMessageSquare':
-            return <LuMessageSquare className={className} />;
-        default:
-            return null;
-    }
+  switch (iconName) {
+    case 'LuCalendar':
+      return <LuCalendar className={className} />;
+    case 'LuPhone':
+      return <LuPhone className={className} />;
+    case 'LuMessageSquare':
+      return <LuMessageSquare className={className} />;
+    default:
+      return null;
+  }
 };
 
 const BookingItem = ({
@@ -82,19 +83,19 @@ const Booking = () => {
     const template = booking.templatePesan;
 
     const renderTemplate = (template: string, data: typeof formData) => {
-        return template.replace(/{{(\w+)}}/g, (match, key) => {
-            return data[key as keyof typeof formData] || match;
-        });
+      return template.replace(/{{(\w+)}}/g, (match, key) => {
+        return data[key as keyof typeof formData] || match;
+      });
     };
 
     const message = renderTemplate(template, formData);
 
     const encodedMessage = encodeURIComponent(message);
 
-    const phoneNumber = Data.booking.phoneNumber; 
+    const phoneNumber = Data.booking.phoneNumber;
 
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-};
+  };
 
   return (
     <FlexSection
@@ -131,7 +132,7 @@ const Booking = () => {
                   number={step.number}
                   icon={
                     getIconByName(
-                      step.icon, 
+                      step.icon,
                       "w-12 h-12 text-pink-500 group-hover:text-pink-600 transition-colors"
                     )
                   }
@@ -195,15 +196,25 @@ const Booking = () => {
               </div>
 
               <div className="flex flex-col lg:flex-row gap-6">
-                <input
+                <select
                   name="jam"
                   value={formData.jam}
                   onChange={handleChange}
                   className="flex-1 px-6 py-3 border border-pink-500 text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
-                  type={booking.formFields.jam.type}
                   required={booking.formFields.jam.required}
                   title="Jam harus dipilih"
-                />
+                >
+                  <option value="">Pilih Jam</option>
+                  {Array.from({ length: 24 }, (_, i) => {
+                    const hour = i.toString().padStart(2, "0");
+                    return (
+                      <React.Fragment key={hour}>
+                        <option value={`${hour}:00`}>{hour}:00</option>
+                        <option value={`${hour}:30`}>{hour}:30</option>
+                      </React.Fragment>
+                    );
+                  })}
+                </select>
               </div>
 
               <textarea

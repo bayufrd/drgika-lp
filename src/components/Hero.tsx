@@ -78,6 +78,8 @@ const Hero = () => {
                                         {firstPractice.time || '09.00 - 11.00'}
                                         <br />
                                         {firstPractice.time2 || '15.00 - 20.00'}
+                                        <br />
+                                        {firstPractice.time3 || '15.00 - 20.00'}
                                     </p>
                                 </div>
 
@@ -94,6 +96,8 @@ const Hero = () => {
                                         {secondPractice.time || '09.00 - 11.00'}
                                         <br />
                                         {secondPractice.time2 || '15.30 - 17.30'}
+                                        <br />
+                                        {firstPractice.time3 || '15.00 - 20.00'}
                                     </p>
                                 </div>
                             </div>

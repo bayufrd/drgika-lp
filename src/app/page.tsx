@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import HowTo from "@/components/HowTo";
 import Services from "@/components/Services";
 import Pictures from "@/components/Pictures";
+import WhatsappButton from "@/components/WhatsappButton";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
     ]
   },
-  title: 'Drg. Ika Kiromin - Praktik Dokter Gigi Profesional di Solo & Sekitarnya',
+  title: 'Dokter Gigi Solo - Drg. Ika Kiromin | Praktik Dokter Gigi Profesional di Solo & Sekitarnya',
   description: 'Praktik dokter gigi profesional Drg. Ika Kiromin di Solo, Surakarta, dan Sukoharjo. Menyediakan layanan kesehatan gigi terpercaya, perawatan berkualitas, dan solusi kesehatan gigi modern untuk seluruh keluarga.',
   keywords: [
     // Existing keywords
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     'perawatan gigi komprehensif'
   ],
   openGraph: {
-    title: 'Drg. Ika Kiromin - Praktik Dokter Gigi Profesional di Solo',
+    title: 'Dokter Gigi Solo - Drg. Ika Kiromin | Praktik Dokter Gigi Profesional di Solo & Sekitarnya',
     description: 'Praktik dokter gigi profesional terpercaya di wilayah Solo, Surakarta, dan Sukoharjo. Perawatan berkualitas dan komprehensif untuk kesehatan gigi keluarga.',
     type: 'website',
     locale: 'id_ID',
@@ -102,6 +103,9 @@ const Home = () => (
     <Pictures />
     <Booking />
     <Footer />
+
+    {/* Floating WhatsApp */}
+    <WhatsappButton />
   </>
 );
 
