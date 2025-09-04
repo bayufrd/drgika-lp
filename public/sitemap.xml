@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://doktergigisolo.id/</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.doktergigisolo.id/</loc>
+    <lastmod>2025-09-03</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.doktergigisolo.id/#layanan</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.doktergigisolo.id/#booking</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.doktergigisolo.id/#kontak</loc>
+    <priority>0.8</priority>
   </url>
 </urlset>
