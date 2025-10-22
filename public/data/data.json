@@ -52,7 +52,7 @@
                 "title": "Ptaktek BPJS",
                 "day": "Senin - Jumat",
                 "time": "Pagi: 09.00 - 11.00",
-                "time2": "Sore: 15.30 - 18.30",
+                "time2": "Sore: 15.30 - 20.00",
                 "time3": "Sabtu: Sore 15.30 - 17.30"
             },
             "add-ons": "Janji & Konsultasi via tombol di bawah"
@@ -244,6 +244,279 @@
                 "description": "Klinik Solo",
                 "largeImage": "/data/mama1.jpeg",
                 "smallImage": "/data/mama1.jpeg",
+                "category": "proses"
+            }
+            ,
+            {
+                "id": 8,
+                "title": "Galeri Random 1",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/1.jpeg",
+                "smallImage": "/data/newData/1.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 9,
+                "title": "Galeri Random 2",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/2.jpeg",
+                "smallImage": "/data/newData/2.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 10,
+                "title": "Galeri Random 3",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/3.jpeg",
+                "smallImage": "/data/newData/3.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 11,
+                "title": "Galeri Random 4",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/4.jpeg",
+                "smallImage": "/data/newData/4.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 12,
+                "title": "Galeri Random 5",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/5.jpeg",
+                "smallImage": "/data/newData/5.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 13,
+                "title": "Galeri Random 6",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/6.jpeg",
+                "smallImage": "/data/newData/6.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 14,
+                "title": "Galeri Random 7",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/7.jpeg",
+                "smallImage": "/data/newData/7.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 15,
+                "title": "Galeri Random 8",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/8.jpeg",
+                "smallImage": "/data/newData/8.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 16,
+                "title": "Galeri Random 9",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/9.jpeg",
+                "smallImage": "/data/newData/9.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 17,
+                "title": "Galeri Random 10",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/10.jpeg",
+                "smallImage": "/data/newData/10.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 18,
+                "title": "Galeri Random 11",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/11.jpeg",
+                "smallImage": "/data/newData/11.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 19,
+                "title": "Galeri Random 12",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/12.jpeg",
+                "smallImage": "/data/newData/12.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 20,
+                "title": "Galeri Random 13",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/13.jpeg",
+                "smallImage": "/data/newData/13.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 21,
+                "title": "Galeri Random 14",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/14.jpeg",
+                "smallImage": "/data/newData/14.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 22,
+                "title": "Galeri Random 15",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/15.jpeg",
+                "smallImage": "/data/newData/15.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 23,
+                "title": "Galeri Random 16",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/16.jpeg",
+                "smallImage": "/data/newData/16.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 24,
+                "title": "Galeri Random 17",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/17.jpeg",
+                "smallImage": "/data/newData/17.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 25,
+                "title": "Galeri Random 18",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/18.jpeg",
+                "smallImage": "/data/newData/18.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 26,
+                "title": "Galeri Random 19",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/19.jpeg",
+                "smallImage": "/data/newData/19.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 27,
+                "title": "Galeri Random 20",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/20.jpeg",
+                "smallImage": "/data/newData/20.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 28,
+                "title": "Galeri Random 21",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/21.jpeg",
+                "smallImage": "/data/newData/21.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 29,
+                "title": "Galeri Random 22",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/22.jpeg",
+                "smallImage": "/data/newData/22.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 30,
+                "title": "Galeri Random 23",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/23.jpeg",
+                "smallImage": "/data/newData/23.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 31,
+                "title": "Galeri Random 24",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/24.jpeg",
+                "smallImage": "/data/newData/24.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 32,
+                "title": "Galeri Random 25",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/25.jpeg",
+                "smallImage": "/data/newData/25.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 33,
+                "title": "Galeri Random 26",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/26.jpeg",
+                "smallImage": "/data/newData/26.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 34,
+                "title": "Galeri Random 27",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/27.jpeg",
+                "smallImage": "/data/newData/27.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 35,
+                "title": "Galeri Random 28",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/28.jpeg",
+                "smallImage": "/data/newData/28.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 36,
+                "title": "Galeri Random 29",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/29.jpeg",
+                "smallImage": "/data/newData/29.jpeg",
+                "category": "sesudah"
+            },
+            {
+                "id": 37,
+                "title": "Galeri Random 30",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/30.jpeg",
+                "smallImage": "/data/newData/30.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 38,
+                "title": "Galeri Random 31",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/31.jpeg",
+                "smallImage": "/data/newData/31.jpeg",
+                "category": "sebelum"
+            },
+            {
+                "id": 39,
+                "title": "Galeri Random 32",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/32.jpeg",
+                "smallImage": "/data/newData/32.jpeg",
+                "category": "proses"
+            },
+            {
+                "id": 40,
+                "title": "Galeri Random 33",
+                "description": "Video dokumentasi perawatan (mp4)",
+                "largeImage": "/data/newData/33.mp4",
+                "smallImage": "/data/newData/33.mp4",
+                "category": "sesudah"
+            },
+            {
+                "id": 41,
+                "title": "Galeri Random 34",
+                "description": "Foto dokumentasi klinik dan perawatan.",
+                "largeImage": "/data/newData/34.mp4",
+                "smallImage": "/data/newData/34.mp4",
                 "category": "proses"
             }
         ],

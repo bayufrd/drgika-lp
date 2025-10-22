@@ -221,7 +221,7 @@ const Booking = () => {
                 name="tambahan"
                 value={formData.tambahan}
                 onChange={handleChange}
-                className="min-h-[15rem] px-6 py-3 border border-pink-500 placeholder:text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
+                className="min-h-[5rem] px-6 py-3 border border-pink-500 placeholder:text-pink-500 rounded-lg focus:ring-2 focus:ring-pink-300 transition"
                 placeholder={booking.formFields.tambahan.placeholder}
                 required={booking.formFields.tambahan.required}
                 title="Informasi tambahan harus diisi"
