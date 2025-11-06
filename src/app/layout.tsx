@@ -1,6 +1,7 @@
 import "./globals.css";
 import headerData from "@/../public/data/data.json"; // cek path lagi
 import footerData from "@/../public/data/data.json"; // sama file, cuma ambil bagian footer
+import PromoModal from "@/components/PromoModal";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   // ambil array link socmed
@@ -51,7 +52,21 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
-      <body className="font-inter text-primary">{children}</body>
+      <body className="font-inter text-primary">
+        {children}
+        {/* Promo modal: pass main social links for quick consult */}
+        <PromoModal
+          links={
+            footerData.footer.socialMedia
+              .filter((s: any) =>
+                ["whatsapp", "instagram", "tiktok", "facebook"].some((k) =>
+                  s.name.toLowerCase().includes(k)
+                )
+              )
+              .map((s: any) => ({ name: s.name, link: s.link, icon: s.icon }))
+          }
+        />
+      </body>
     </html>
   );
 };
