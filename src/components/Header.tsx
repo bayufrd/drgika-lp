@@ -49,10 +49,7 @@ const Header = () => {
         return null;
     }
 
-    // Filter links, exclude 'Konsultasi'
-    const desktopNavLinks = headerData.footer.quickLinks.filter(
-        (link: NavLink) => link.label !== 'Konsultasi'
-    );
+    const desktopNavLinks = headerData.footer.quickLinks;
 
     return (
         <>
@@ -111,21 +108,25 @@ const Header = () => {
                             <span className="text-accent text-pink-500">{headerData.header.name.prefix}</span> {headerData.header.name.short}
                         </a>
                         <div className="hidden md:flex items-center gap-6 text-sm font-medium">
-                            {desktopNavLinks.map((link: NavLink) => (
-                                <a 
-                                    key={link.href}
-                                    className="transition hover:text-accent flex items-center gap-1" 
-                                    href={link.href}
-                                >
-                                    {link.label}
-                                </a>
-                            ))}
-                            <ButtonLink 
-                                className="px-5 py-2 bg-accent text-white bg-pink-500 hover:bg-pink-600 rounded-md" 
-                                href="#booking"
-                            >
-                                Konsultasi
-                            </ButtonLink>
+                            {desktopNavLinks.map((link: NavLink) =>
+                                link.label.toLowerCase() === "konsultasi" ? (
+                                    <ButtonLink
+                                        key={link.href}
+                                        className="px-5 py-2 bg-accent text-white bg-pink-500 hover:bg-pink-600 rounded-md"
+                                        href={link.href}
+                                    >
+                                        {link.label}
+                                    </ButtonLink>
+                                ) : (
+                                    <a
+                                        key={link.href}
+                                        className="transition hover:text-accent flex items-center gap-1"
+                                        href={link.href}
+                                    >
+                                        {link.label}
+                                    </a>
+                                )
+                            )}
                         </div>
                         <button 
                             className="md:hidden block text-accent" 
