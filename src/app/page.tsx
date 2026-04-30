@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import HowTo from "@/components/HowTo";
 import Services from "@/components/Services";
 import Pictures from "@/components/Pictures";
+import Reviews from "@/components/Reviews";
 import WhatsappButton from "@/components/WhatsappButton";
 import { Metadata } from 'next';
 
@@ -102,6 +103,7 @@ const Home = () => (
     <Benefits />
     <Pictures />
     <Booking />
+    <Reviews />
     <Footer />
 
     {/* Floating WhatsApp */}
