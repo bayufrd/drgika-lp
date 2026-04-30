@@ -2,6 +2,8 @@ import "./globals.css";
 import headerData from "@/../public/data/data.json"; // cek path lagi
 import footerData from "@/../public/data/data.json"; // sama file, cuma ambil bagian footer
 import PromoModal from "@/components/PromoModal";
+import Script from "next/script";
+import UmamiTrack from "@/components/UmamiTrack";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   // ambil array link socmed
@@ -47,12 +49,18 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="id">
       <head>
+        <Script
+          src="https://umami.dastrevas.com/script.js"
+          data-website-id="e660aea4-869f-4fc8-916d-25f3a8528a13"
+          strategy="afterInteractive"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
       <body className="font-inter text-primary">
+        <UmamiTrack />
         {children}
         {/* Promo modal: pass main social links for quick consult */}
         <PromoModal
