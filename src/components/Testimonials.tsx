@@ -78,7 +78,7 @@ const Testimonials = () => (
         <p className="text-xl text-gray-600 mt-4">Ulasan bintang 5 dari pasien.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
         {testimonials.map((t, idx) => (
           <div
             key={idx}
@@ -116,4 +116,3 @@ const Testimonials = () => (
 );
 
 export default Testimonials;
-
