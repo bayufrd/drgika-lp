@@ -249,7 +249,7 @@
             ,
             {
                 "id": 8,
-                "title": "Galeri Random 1",
+                "title": "Galeri 1",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/1.jpeg",
                 "smallImage": "/data/newData/1.jpeg",
@@ -257,7 +257,7 @@
             },
             {
                 "id": 9,
-                "title": "Galeri Random 2",
+                "title": "Galeri 2",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/2.jpeg",
                 "smallImage": "/data/newData/2.jpeg",
@@ -265,7 +265,7 @@
             },
             {
                 "id": 10,
-                "title": "Galeri Random 3",
+                "title": "Galeri 3",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/3.jpeg",
                 "smallImage": "/data/newData/3.jpeg",
@@ -273,7 +273,7 @@
             },
             {
                 "id": 11,
-                "title": "Galeri Random 4",
+                "title": "Galeri 4",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/4.jpeg",
                 "smallImage": "/data/newData/4.jpeg",
@@ -281,7 +281,7 @@
             },
             {
                 "id": 12,
-                "title": "Galeri Random 5",
+                "title": "Galeri 5",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/5.jpeg",
                 "smallImage": "/data/newData/5.jpeg",
@@ -289,7 +289,7 @@
             },
             {
                 "id": 13,
-                "title": "Galeri Random 6",
+                "title": "Galeri 6",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/6.jpeg",
                 "smallImage": "/data/newData/6.jpeg",
@@ -297,7 +297,7 @@
             },
             {
                 "id": 14,
-                "title": "Galeri Random 7",
+                "title": "Galeri 7",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/7.jpeg",
                 "smallImage": "/data/newData/7.jpeg",
@@ -305,7 +305,7 @@
             },
             {
                 "id": 15,
-                "title": "Galeri Random 8",
+                "title": "Galeri 8",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/8.jpeg",
                 "smallImage": "/data/newData/8.jpeg",
@@ -313,7 +313,7 @@
             },
             {
                 "id": 16,
-                "title": "Galeri Random 9",
+                "title": "Galeri 9",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/9.jpeg",
                 "smallImage": "/data/newData/9.jpeg",
@@ -321,7 +321,7 @@
             },
             {
                 "id": 17,
-                "title": "Galeri Random 10",
+                "title": "Galeri 10",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/10.jpeg",
                 "smallImage": "/data/newData/10.jpeg",
@@ -329,7 +329,7 @@
             },
             {
                 "id": 18,
-                "title": "Galeri Random 11",
+                "title": "Galeri 11",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/11.jpeg",
                 "smallImage": "/data/newData/11.jpeg",
@@ -337,7 +337,7 @@
             },
             {
                 "id": 19,
-                "title": "Galeri Random 12",
+                "title": "Galeri 12",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/12.jpeg",
                 "smallImage": "/data/newData/12.jpeg",
@@ -345,7 +345,7 @@
             },
             {
                 "id": 20,
-                "title": "Galeri Random 13",
+                "title": "Galeri 13",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/13.jpeg",
                 "smallImage": "/data/newData/13.jpeg",
@@ -353,7 +353,7 @@
             },
             {
                 "id": 21,
-                "title": "Galeri Random 14",
+                "title": "Galeri 14",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/14.jpeg",
                 "smallImage": "/data/newData/14.jpeg",
@@ -361,7 +361,7 @@
             },
             {
                 "id": 22,
-                "title": "Galeri Random 15",
+                "title": "Galeri 15",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/15.jpeg",
                 "smallImage": "/data/newData/15.jpeg",
@@ -369,7 +369,7 @@
             },
             {
                 "id": 23,
-                "title": "Galeri Random 16",
+                "title": "Galeri 16",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/16.jpeg",
                 "smallImage": "/data/newData/16.jpeg",
@@ -377,7 +377,7 @@
             },
             {
                 "id": 24,
-                "title": "Galeri Random 17",
+                "title": "Galeri 17",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/17.jpeg",
                 "smallImage": "/data/newData/17.jpeg",
@@ -385,7 +385,7 @@
             },
             {
                 "id": 25,
-                "title": "Galeri Random 18",
+                "title": "Galeri 18",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/18.jpeg",
                 "smallImage": "/data/newData/18.jpeg",
@@ -393,7 +393,7 @@
             },
             {
                 "id": 26,
-                "title": "Galeri Random 19",
+                "title": "Galeri 19",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/19.jpeg",
                 "smallImage": "/data/newData/19.jpeg",
@@ -401,7 +401,7 @@
             },
             {
                 "id": 27,
-                "title": "Galeri Random 20",
+                "title": "Galeri 20",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/20.jpeg",
                 "smallImage": "/data/newData/20.jpeg",
@@ -409,7 +409,7 @@
             },
             {
                 "id": 28,
-                "title": "Galeri Random 21",
+                "title": "Galeri 21",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/21.jpeg",
                 "smallImage": "/data/newData/21.jpeg",
@@ -417,7 +417,7 @@
             },
             {
                 "id": 29,
-                "title": "Galeri Random 22",
+                "title": "Galeri 22",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/22.jpeg",
                 "smallImage": "/data/newData/22.jpeg",
@@ -425,7 +425,7 @@
             },
             {
                 "id": 30,
-                "title": "Galeri Random 23",
+                "title": "Galeri 23",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/23.jpeg",
                 "smallImage": "/data/newData/23.jpeg",
@@ -433,7 +433,7 @@
             },
             {
                 "id": 31,
-                "title": "Galeri Random 24",
+                "title": "Galeri 24",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/24.jpeg",
                 "smallImage": "/data/newData/24.jpeg",
@@ -441,7 +441,7 @@
             },
             {
                 "id": 32,
-                "title": "Galeri Random 25",
+                "title": "Galeri 25",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/25.jpeg",
                 "smallImage": "/data/newData/25.jpeg",
@@ -449,7 +449,7 @@
             },
             {
                 "id": 33,
-                "title": "Galeri Random 26",
+                "title": "Galeri 26",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/26.jpeg",
                 "smallImage": "/data/newData/26.jpeg",
@@ -457,7 +457,7 @@
             },
             {
                 "id": 34,
-                "title": "Galeri Random 27",
+                "title": "Galeri 27",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/27.jpeg",
                 "smallImage": "/data/newData/27.jpeg",
@@ -465,7 +465,7 @@
             },
             {
                 "id": 35,
-                "title": "Galeri Random 28",
+                "title": "Galeri 28",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/28.jpeg",
                 "smallImage": "/data/newData/28.jpeg",
@@ -473,7 +473,7 @@
             },
             {
                 "id": 36,
-                "title": "Galeri Random 29",
+                "title": "Galeri 29",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/29.jpeg",
                 "smallImage": "/data/newData/29.jpeg",
@@ -481,7 +481,7 @@
             },
             {
                 "id": 37,
-                "title": "Galeri Random 30",
+                "title": "Galeri 30",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/30.jpeg",
                 "smallImage": "/data/newData/30.jpeg",
@@ -489,7 +489,7 @@
             },
             {
                 "id": 38,
-                "title": "Galeri Random 31",
+                "title": "Galeri 31",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/31.jpeg",
                 "smallImage": "/data/newData/31.jpeg",
@@ -497,7 +497,7 @@
             },
             {
                 "id": 39,
-                "title": "Galeri Random 32",
+                "title": "Galeri 32",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/32.jpeg",
                 "smallImage": "/data/newData/32.jpeg",
@@ -505,7 +505,7 @@
             },
             {
                 "id": 40,
-                "title": "Galeri Random 33",
+                "title": "Galeri 33",
                 "description": "Video dokumentasi perawatan (mp4)",
                 "largeImage": "/data/newData/33.mp4",
                 "smallImage": "/data/newData/33.mp4",
@@ -513,7 +513,7 @@
             },
             {
                 "id": 41,
-                "title": "Galeri Random 34",
+                "title": "Galeri 34",
                 "description": "Foto dokumentasi klinik dan perawatan.",
                 "largeImage": "/data/newData/34.mp4",
                 "smallImage": "/data/newData/34.mp4",
