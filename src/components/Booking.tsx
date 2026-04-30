@@ -115,15 +115,16 @@ const Booking = () => {
 
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 hidden lg:block">
-            <Image
-              className="w-full rounded-2xl border border-pink-200/70 bg-white object-cover shadow-lg"
-              src="/data/mama3.jpeg"
-              alt="Konsultasi"
-              width={500}
-              height={500}
-              sizes="(min-width: 1024px) 50vw, 0px"
-              quality={70}
-            />
+            <div className="relative mx-auto w-full max-w-md aspect-square">
+              <Image
+                className="rounded-2xl border border-pink-200/70 bg-white object-cover shadow-lg"
+                src="/data/mama3.jpeg"
+                alt="Konsultasi"
+                fill
+                sizes="(min-width: 1024px) 28rem, 0px"
+                quality={70}
+              />
+            </div>
           </div>
 
           <div className="flex-1">
