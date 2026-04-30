@@ -8,7 +8,7 @@ type Testimonial = {
   time: string;
   text: string;
   stars: number;
-  image?: { src: string; alt: string };
+  images?: Array<{ src: string; alt: string }>;
 };
 
 const testimonials: Testimonial[] = [
@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
     time: "4 bulan lalu",
     stars: 5,
     text: "Alhamdulillah sudah cabut gigi semoga sembuh gak sakit gigi lagi, terimakasih Bu dokter",
-    image: { src: "/testimonials/bowo-1.png", alt: "Foto ulasan Bowo Saputra" },
+    images: [{ src: "/data/reviews/1.jpg", alt: "Foto ulasan Bowo Saputra" }],
   },
   {
     name: "Aldiana TheTeki",
@@ -36,7 +36,17 @@ const testimonials: Testimonial[] = [
     time: "setahun lalu",
     stars: 5,
     text: "Pelayanan bagus,bu dokter n perawat ramah",
-    image: { src: "/testimonials/rina-1.png", alt: "Foto ulasan Rina Harjanti" },
+    images: [{ src: "/data/reviews/2.jpg", alt: "Foto ulasan Rina Harjanti" }],
+  },
+  {
+    name: "Dimas Aditya Gunawi",
+    time: "setahun lalu",
+    stars: 5,
+    text: "Daftar lewat JKN, penanganannya langsung dan cepat,, Dokter juga ramah,, Alhamdulillah🙏 …",
+    images: [
+      { src: "/data/reviews/3.jpg", alt: "Foto ulasan Dimas Aditya Gunawi (1)" },
+      { src: "/data/reviews/4.jpg", alt: "Foto ulasan Dimas Aditya Gunawi (2)" },
+    ],
   },
   {
     name: "Dinda Ariyanti10",
@@ -79,6 +89,9 @@ const ratingSummary = {
   ],
 };
 
+const gmapsUrl =
+  "https://www.google.com/maps/place/Praktek+drg.+Ika+Kiromin+.B/@-7.6088537,110.8163777,17z/data=!4m16!1m9!3m8!1s0x2e7a17ef10891cbd:0xbdfeb902c0b04874!2sPraktek+drg.+Ika+Kiromin+.B!8m2!3d-7.608859!4d110.818958!9m1!1b1!16s%2Fg%2F11f5q7k8bg!3m5!1s0x2e7a17ef10891cbd:0xbdfeb902c0b04874!8m2!3d-7.608859!4d110.818958!16s%2Fg%2F11f5q7k8bg?entry=ttu&g_ep=EgoyMDI2MDQyOC4wIKXMDSoASAFQAw%3D%3D";
+
 const Testimonials = () => (
   <FlexSection sectionClassName="py-16 bg-white" id="testimoni">
     <div className="container mx-auto px-4">
@@ -91,6 +104,15 @@ const Testimonials = () => (
 
       <div className="mx-auto max-w-2xl">
         <div className="rounded-2xl border border-pink-100 bg-white p-6 shadow-sm">
+          <div className="mb-6 overflow-hidden rounded-2xl border border-pink-100 bg-gray-50">
+            <iframe
+              title="Lokasi Praktek drg. Ika Kiromin"
+              src="https://www.google.com/maps?q=-7.608859,110.818958&z=17&output=embed"
+              className="h-64 w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
           <div className="text-lg font-bold text-gray-800">Ringkasan ulasan</div>
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 items-start">
             <div className="sm:col-span-1">
@@ -131,16 +153,28 @@ const Testimonials = () => (
           </div>
 
           <div className="mt-4 text-xs text-gray-500">
-            Catatan: ringkasan di atas merupakan kutipan dari ulasan Google Maps.
+            Catatan: ringkasan di atas merupakan kutipan dari{" "}
+            <a
+              href={gmapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:text-pink-700 hover:underline"
+            >
+              Google Maps
+            </a>
+            .
           </div>
         </div>
       </div>
 
       <div className="mt-10 mx-auto max-w-2xl grid grid-cols-1 gap-6 items-start">
         {testimonials.map((t, idx) => (
-          <div
+          <a
             key={idx}
-            className="rounded-2xl border border-pink-100 bg-white p-6 shadow-sm"
+            href={gmapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-2xl border border-pink-100 bg-white p-6 shadow-sm transition hover:shadow-md"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
@@ -152,21 +186,32 @@ const Testimonials = () => (
 
             <p className="mt-3 text-sm leading-relaxed text-gray-600">{t.text}</p>
 
-            {t.image ? (
+            {t.images?.length ? (
               <div className="mt-4">
-                <div className="relative w-full overflow-hidden rounded-xl border border-pink-100 bg-gray-50 aspect-[4/3]">
-                  <Image
-                    src={t.image.src}
-                    alt={t.image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                    loading="lazy"
-                  />
+                <div
+                  className={`grid gap-3 ${
+                    t.images.length > 1 ? "grid-cols-2" : "grid-cols-1"
+                  }`}
+                >
+                  {t.images.map((img) => (
+                    <div
+                      key={img.src}
+                      className="relative w-full overflow-hidden rounded-xl border border-pink-100 bg-gray-50 aspect-[4/3]"
+                    >
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 40vw"
+                        className="object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             ) : null}
-          </div>
+          </a>
         ))}
       </div>
     </div>
