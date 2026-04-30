@@ -71,6 +71,7 @@ const Stars = ({ value }: { value: number }) => (
 const ratingSummary = {
   average: 4.8,
   total: 316,
+  distribution: { 5: 88, 4: 8, 3: 2, 2: 1, 1: 1 } as Record<1 | 2 | 3 | 4 | 5, number>,
   highlights: [
     '"Klinik bagus,pelayanannya oke,dokter juga baik.hasil cukup memuaskan"',
     '"Pasang gigi bisa pakai bpjs.. terima kasih"',
@@ -110,7 +111,10 @@ const Testimonials = () => (
                   <div key={s} className="flex items-center gap-3">
                     <div className="w-4 text-sm font-medium text-gray-700">{s}</div>
                     <div className="h-2 flex-1 rounded-full bg-gray-100 overflow-hidden">
-                      <div className="h-full w-0 bg-pink-400" />
+                      <div
+                        className="h-full bg-pink-400"
+                        style={{ width: `${ratingSummary.distribution[s as 1 | 2 | 3 | 4 | 5]}%` }}
+                      />
                     </div>
                   </div>
                 ))}
