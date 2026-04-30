@@ -6,6 +6,19 @@ const nextConfig = {
     appDir: true,
   },
   swcMinify: true,
+  async headers() {
+    return [
+      {
+        source: "/images/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
   webpack: (config, { dev }) => {  // Tambahkan { dev }
     if (!dev) {
       config.optimization.minimize = true;

@@ -167,6 +167,8 @@ const Pictures: React.FC = () => {
                     alt={item.title}
                     width={400}
                     height={300}
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    quality={60}
                     className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
