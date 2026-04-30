@@ -59,9 +59,9 @@ const Hero = () => {
                         <div className="bg-white rounded-lg shadow-md p-4 mt-4 max-w-xl mx-auto lg:mx-0">
                             <div className="flex items-center justify-center space-x-2 mb-3">
                                 <LuClock className="w-6 h-6 text-pink-500" />
-                                <h3 className="text-lg font-semibold text-gray-800">
+                                <h2 className="text-lg font-semibold text-gray-800">
                                     {hero.detail || 'Jadwal Praktek'}
-                                </h3>
+                                </h2>
                             </div>
 
                             <div className="grid grid-cols-2 gap-4">

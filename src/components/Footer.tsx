@@ -73,6 +73,8 @@ const Footer = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 									className="hover:text-gray-200 transition-colors"
+									aria-label={social.name}
+									title={social.name}
 								>
 									{getIconByName(social.icon, "w-6 h-6")}
 								</a>

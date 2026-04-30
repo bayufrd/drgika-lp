@@ -72,7 +72,7 @@ const Header = () => {
                         backgroundColor: '#f8f9fa',
                     }}
                 >
-                    <Wrapper className="flex items-center gap-4 text-xs text-secondary font-medium">
+                    <Wrapper className="flex items-center gap-4 text-xs text-gray-700 font-medium">
                         <HeaderInfo 
                             Icon={<BsHospital className="text-accent" />} 
                             text={`Praktek ${headerData.header.name.full}`} 
