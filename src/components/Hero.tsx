@@ -122,13 +122,14 @@ const Hero = () => {
                             </button>
                         </div>
                     </motion.div>
-                    <div className="hidden lg:flex justify-center items-center relative w-full max-w-md h-[300px]">
+                    <div className="hidden lg:flex justify-center items-center relative w-full max-w-md h-[360px]">
                         <Image
-                            src={hero.heroImage || '/images/hero.svg'}
-                            alt={hero.heroImageAlt || 'Ilustrasi Perawatan Gigi Modern'}
+                            src="/data/newData/32.jpeg"
+                            alt={hero.heroImageAlt || 'Dokumentasi klinik'}
                             fill
-                            className="animate-float"
-                            style={{ objectFit: 'contain' }}
+                            priority
+                            sizes="(min-width: 1024px) 28rem, 0px"
+                            className="rounded-2xl border border-pink-200/70 bg-white object-cover shadow-lg"
                         />
                     </div>
                 </div>
