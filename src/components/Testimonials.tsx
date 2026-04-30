@@ -68,6 +68,16 @@ const Stars = ({ value }: { value: number }) => (
   </div>
 );
 
+const ratingSummary = {
+  average: 4.8,
+  total: 316,
+  highlights: [
+    '"Klinik bagus,pelayanannya oke,dokter juga baik.hasil cukup memuaskan"',
+    '"Pasang gigi bisa pakai bpjs.. terima kasih"',
+    '"Untuk pasien anak kurang lembut, anakku trauma jdinya ke dr."',
+  ],
+};
+
 const Testimonials = () => (
   <FlexSection sectionClassName="py-16 bg-white" id="testimoni">
     <div className="container mx-auto px-4">
@@ -78,7 +88,51 @@ const Testimonials = () => (
         <p className="text-xl text-gray-600 mt-4">Ulasan bintang 5 dari pasien.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+      <div className="mx-auto max-w-2xl">
+        <div className="rounded-2xl border border-pink-100 bg-white p-6 shadow-sm">
+          <div className="text-lg font-bold text-gray-800">Ringkasan ulasan</div>
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 items-start">
+            <div className="sm:col-span-1">
+              <div className="text-4xl font-extrabold text-gray-800 leading-none">
+                {ratingSummary.average.toFixed(1)}
+              </div>
+              <div className="mt-2">
+                <Stars value={5} />
+              </div>
+              <div className="mt-2 text-sm text-gray-500">
+                {ratingSummary.total.toLocaleString("id-ID")} ulasan
+              </div>
+            </div>
+
+            <div className="sm:col-span-2">
+              <div className="space-y-2">
+                {[5, 4, 3, 2, 1].map((s) => (
+                  <div key={s} className="flex items-center gap-3">
+                    <div className="w-4 text-sm font-medium text-gray-700">{s}</div>
+                    <div className="h-2 flex-1 rounded-full bg-gray-100 overflow-hidden">
+                      <div className="h-full w-0 bg-pink-400" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 gap-3">
+            {ratingSummary.highlights.map((q) => (
+              <div key={q} className="rounded-xl border border-pink-100 bg-pink-50/40 p-4 text-sm text-gray-700">
+                {q}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 text-xs text-gray-500">
+            Catatan: ringkasan di atas merupakan kutipan dari ulasan Google Maps.
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-10 mx-auto max-w-2xl grid grid-cols-1 gap-6 items-start">
         {testimonials.map((t, idx) => (
           <div
             key={idx}
