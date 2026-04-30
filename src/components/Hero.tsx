@@ -122,15 +122,17 @@ const Hero = () => {
                             </button>
                         </div>
                     </motion.div>
-                    <div className="hidden lg:flex justify-center items-center relative w-full max-w-md h-[360px]">
-                        <Image
-                            src="/data/newData/32.jpeg"
-                            alt={hero.heroImageAlt || 'Dokumentasi klinik'}
-                            fill
-                            priority
-                            sizes="(min-width: 1024px) 28rem, 0px"
-                            className="rounded-2xl border border-pink-200/70 bg-white object-cover shadow-lg"
-                        />
+                    <div className="flex justify-center items-center relative w-full">
+                        <div className="relative w-full max-w-sm lg:max-w-md aspect-[4/3] lg:h-[360px] lg:aspect-auto">
+                            <Image
+                                src="/data/newData/32.jpeg"
+                                alt={hero.heroImageAlt || 'Dokumentasi klinik'}
+                                fill
+                                priority
+                                sizes="(max-width: 1024px) 90vw, 28rem"
+                                className="rounded-2xl border border-pink-200/70 bg-white object-cover shadow-lg"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
