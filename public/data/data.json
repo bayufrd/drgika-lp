@@ -634,9 +634,8 @@
             { "label": "Layanan", "href": "#services" },
             { "label": "Keuntungan", "href": "#benefits" },
             { "label": "Galleri", "href": "#galeri" },
-            { "label": "Konsultasi", "href": "#booking" },
             { "label": "Testimoni", "href": "#testimoni" },
-            { "label": "Ulasan", "href": "#ulasan" }
+            { "label": "Konsultasi", "href": "#booking" }
         ]
     }
 }

@@ -103,9 +103,9 @@ const Home = () => (
     <Services />
     <Benefits />
     <Pictures />
-    <Booking />
     <Testimonials />
     <Reviews />
+    <Booking />
     <Footer />
 
     {/* Floating WhatsApp */}
