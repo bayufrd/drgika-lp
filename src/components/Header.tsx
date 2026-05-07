@@ -10,6 +10,7 @@ import { useState, useEffect, useRef } from "react";
 import MobileMenu from "./MobileMenu";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 import headerData from 'public/data/data.json';
+import { usePathname } from "next/navigation";
 
 interface NavLink {
     label: string;
@@ -20,6 +21,7 @@ const Header = () => {
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
     const [isClient, setIsClient] = useState(false);
     const menuRef = useRef<HTMLElement>(null);
+    const pathname = usePathname();
 
     // Pastikan komponen hanya di-render di client
     useEffect(() => {
@@ -50,6 +52,10 @@ const Header = () => {
     }
 
     const desktopNavLinks = headerData.footer.quickLinks;
+    const normalizeHref = (href: string) => {
+        if (href?.startsWith("#")) return pathname === "/" ? href : `/${href}`;
+        return href;
+    };
 
     return (
         <>
@@ -103,7 +109,7 @@ const Header = () => {
                     <Wrapper className="flex items-center justify-between">
                         <a
                             className="text-xl font-bold transition hover:opacity-80"
-                            href="#pagetop"
+                            href={pathname === "/" ? "#pagetop" : "/"}
                         >
                             <span className="text-accent text-pink-500">{headerData.header.name.prefix}</span> {headerData.header.name.short}
                         </a>
@@ -113,7 +119,7 @@ const Header = () => {
                                     <ButtonLink
                                         key={link.href}
                                         className="px-5 py-2 bg-accent text-white bg-pink-500 hover:bg-pink-600 rounded-md"
-                                        href={link.href}
+                                        href={normalizeHref(link.href)}
                                     >
                                         {link.label}
                                     </ButtonLink>
@@ -121,7 +127,7 @@ const Header = () => {
                                     <a
                                         key={link.href}
                                         className="transition hover:text-accent flex items-center gap-1"
-                                        href={link.href}
+                                        href={normalizeHref(link.href)}
                                     >
                                         {link.label}
                                     </a>

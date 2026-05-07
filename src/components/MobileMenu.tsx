@@ -4,6 +4,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import { Ref } from "react";
 import twclsx from "@/utils/twclsx";
 import Data from "public/data/data.json";
+import { usePathname } from "next/navigation";
 
 interface IProps {
     isOpen: boolean;
@@ -18,6 +19,11 @@ interface NavLink {
 
 const MobileMenu = ({ isOpen = false, onCloseClick, menuRef }: IProps) => {
     const { footer } = Data;
+    const pathname = usePathname();
+    const normalizeHref = (href: string) => {
+        if (href?.startsWith("#")) return pathname === "/" ? href : `/${href}`;
+        return href;
+    };
 
     return (
         <div
@@ -47,7 +53,7 @@ const MobileMenu = ({ isOpen = false, onCloseClick, menuRef }: IProps) => {
                         <a
                             key={link.href}
                             className="transition hover:text-accent"
-                            href={link.href}
+                            href={normalizeHref(link.href)}
                             onClick={onCloseClick}
                         >
                             {link.label}
