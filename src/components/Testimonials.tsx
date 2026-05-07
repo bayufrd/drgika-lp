@@ -84,8 +84,7 @@ const ratingSummary = {
   distribution: { 5: 88, 4: 8, 3: 2, 2: 1, 1: 1 } as Record<1 | 2 | 3 | 4 | 5, number>,
   highlights: [
     '"Klinik bagus,pelayanannya oke,dokter juga baik.hasil cukup memuaskan"',
-    '"Pasang gigi bisa pakai bpjs.. terima kasih"',
-    '"Untuk pasien anak kurang lembut, anakku trauma jdinya ke dr."',
+    '"Pasang gigi bisa pakai bpjs.. terima kasih"'
   ],
 };
 
