@@ -635,6 +635,7 @@
             { "label": "Keuntungan", "href": "#benefits" },
             { "label": "Galleri", "href": "#galeri" },
             { "label": "Testimoni", "href": "#testimoni" },
+            { "label": "Artikel", "href": "/artikel" },
             { "label": "Konsultasi", "href": "#booking" }
         ]
     }
