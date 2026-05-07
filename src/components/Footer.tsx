@@ -1,3 +1,5 @@
+ "use client";
+
 import FlexSection from "./FlexSection";
 import Image from "next/image";
 import {
@@ -10,6 +12,7 @@ import {
 	FaFacebook
 } from "react-icons/fa";
 import Data from "public/data/data.json";
+import { usePathname } from "next/navigation";
 
 // Helper function to map icon names to actual icons
 const getIconByName = (iconName: string, className?: string) => {
@@ -31,6 +34,11 @@ const getIconByName = (iconName: string, className?: string) => {
 
 const Footer = () => {
 	const { footer } = Data;
+	const pathname = usePathname();
+	const normalizeHref = (href: string) => {
+		if (href?.startsWith("#")) return pathname === "/" ? href : `/${href}`;
+		return href;
+	};
 
 	return (
 		<FlexSection
@@ -101,7 +109,7 @@ const Footer = () => {
 							{footer.quickLinks.map((link) => (
 								<a
 									key={link.href}
-									href={link.href}
+									href={normalizeHref(link.href)}
 									className="block hover:text-gray-200 transition-colors"
 								>
 									{link.label}
