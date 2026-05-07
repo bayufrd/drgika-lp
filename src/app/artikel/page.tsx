@@ -6,7 +6,7 @@ export const revalidate = 3600;
 export default async function Page() {
   const result = await getArticles(1, 4);
   return (
-    <main className="pt-20">
+    <main>
       <ArticleList
         initialArticles={result.articles}
         initialMeta={result.meta}

@@ -8,7 +8,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const maybeId = slug.split("-").pop() || "";
   const article = await getArticleById(Number(maybeId));
   return (
-    <main className="pt-20">
+    <main>
       <ArticleDetail article={article} />
     </main>
   );
